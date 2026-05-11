@@ -127,6 +127,23 @@
   }
   .view-toggle-btn:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
 
+  /* ── MOBILE MENU BUTTON ──────────────────────────── */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-left: auto;
+    margin-right: 10px;
+    transition: opacity 0.2s;
+  }
+  .mobile-menu-btn:hover {
+    opacity: 0.8;
+  }
+
   /* ── VIEW SWITCHER ───────────────────────────────────── */
   .view-switcher {
     display: flex; gap: 4px;
@@ -191,7 +208,7 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
 /* ── PRINT BASE ─────────────────────────────────────── */
 @media print {
   body { padding: 0; background: white; }
-  .site-header, .site-sidebar, .view-toggle-btn, .view-switcher { display: none !important; }
+  .site-header, .site-sidebar, .view-toggle-btn, .view-switcher, .mobile-menu-btn { display: none !important; }
   .page { max-width: none !important; }
 }
 /* ── FRAMEWORK ALIGNMENT COMPONENTS ───────────────── */
@@ -294,7 +311,7 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
 /* Small Tablet / Large Mobile (576px - 767px) */
 @media (max-width: 767px) and (min-width: 576px) {
   :root {
-    --sidebar-w: 180px;
+    --sidebar-w: 0px;
     --header-h: 52px;
   }
   header.site-header {
@@ -316,37 +333,21 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
   .sh-badge {
     display: none;
   }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .view-toggle-btn {
     padding: 4px 8px;
     font-size: 0.75rem;
     margin-left: 4px;
   }
   aside.site-sidebar {
-    width: var(--sidebar-w);
-    padding: 12px 0 20px;
+    display: none;
   }
-  .sn-label {
-    font-size: 0.7rem;
-    padding: 0 10px 3px;
-  }
-  .sn-item {
-    padding: 7px 10px;
-    gap: 6px;
-  }
-  .sn-num {
-    width: 20px;
-    height: 20px;
-    font-size: 0.75rem;
-  }
-  .sn-text strong {
-    font-size: 0.8rem;
-  }
-  .sn-text span {
-    font-size: 0.7rem;
-  }
-  .sn-footer {
-    padding: 12px 10px 0;
-    font-size: 0.65rem;
+  body.view-clean { 
+    padding-left: 0 !important;
   }
 }
 
@@ -375,6 +376,12 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
   }
   .sh-badge {
     display: none;
+  }
+  .mobile-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
   }
   .view-toggle-btn {
     padding: 3px 6px;
