@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+ Organization Transformation Workflow</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="workflow-page">
+
+<script src="layout-loader.js"></script>
+
+<div id="aipo-content">
+
+<div class="page">
+  <div class="page-header">
+    <h1>AI+ ORGANIZATION TRANSFORMATION WORKFLOW</h1>
+    <p>A practical, repeatable framework to identify, build and scale AI initiatives that deliver measurable business impact.</p>
+  </div>
+
+<div class="step-controls">
+  <div class="sc-modes">
+    <button class="sc-btn" data-mode="all" onclick="setStepMode('all')">All Steps</button>
+    <button class="sc-btn" data-mode="1"   onclick="setStepMode('1')">1 Step</button>
+    <button class="sc-btn" data-mode="3"   onclick="setStepMode('3')">3 Steps</button>
+  </div>
+  <div class="sc-nav" id="scNav">
+    <button class="sc-arrow" id="prevBtn" onclick="goStep(-1)">&#8592; Prev</button>
+    <span class="sc-counter" id="scCounter">Step 1 of 6</span>
+    <button class="sc-arrow" id="nextBtn" onclick="goStep(1)">Next &#8594;</button>
+  </div>
+  <div class="sc-dots" id="scDots"></div>
+</div>
+
+  <div class="workflow-grid">
+
+    <!-- Col 1 -->
+    <div class="col c1">
+      <div class="col-header h1">
+        <div class="col-num">1</div>
+        <div>
+          <div class="col-title">VALUE (WHY)</div>
+          <div class="col-sub">Define the core outcomes the organization wants to achieve with AI.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Define strategic outcomes for AI (efficiency, quality, capability)</li>
+          <li>Align on business priorities and success metrics</li>
+          <li>Establish North Star goals and target impact</li>
+          <li>Get leadership alignment and commitment</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Executive Leadership</li>
+          <li>Strategy / Planning</li>
+          <li>Finance / Business Control</li>
+        </ul>
+      </div>
+      <div class="fw-badges" style="padding:8px 16px 4px;">
+        <span class="fw-badge fw-itil">ITIL SVS</span>
+        <span class="fw-badge fw-pmbok">PMBOK</span>
+      </div>
+      <div class="output-box c1">
+        <span class="output-label">Output</span>
+        Clear value targets and success metrics
+      </div>
+    </div>
+
+    <!-- Col 2 -->
+    <div class="col c2">
+      <div class="col-header h2">
+        <div class="col-num">2</div>
+        <div>
+          <div class="col-title">USE CASES (WHERE)</div>
+          <div class="col-sub">Standardized ways AI is applied across the organization.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Gather bottom-up pain points and top-down opportunities</li>
+          <li>Classify use cases: Automation, Augmentation, Generation, Prediction, Optimization</li>
+          <li>Evaluate and score (impact, effort, risk, feasibility)</li>
+          <li>Prioritize top use cases (3–10 to start)</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Business Leaders</li>
+          <li>Operations Teams</li>
+          <li>Product Owners / Managers</li>
+          <li>AI / Tech Explorer</li>
+        </ul>
+      </div>
+      <div class="output-box c2">
+        <span class="output-label">Output</span>
+        Prioritized use case portfolio with expected value
+      </div>
+    </div>
+
+    <!-- Col 3 -->
+    <div class="col c3">
+      <div class="col-header h3">
+        <div class="col-num">3</div>
+        <div>
+          <div class="col-title">OPERATING MODEL (HOW)</div>
+          <div class="col-sub">Define how humans and AI work together in real workflows.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Choose interaction model:<br><em>– Assistive (Human in Control)</em><br><em>– Co-Pilot (AI + Human)</em><br><em>– Autonomous (AI in Control)</em></li>
+          <li>Redesign end-to-end workflow: what is eliminated, automated, and remains human</li>
+          <li>Define decision ownership, approvals and exception handling</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Process Owners</li>
+          <li>Department Leads</li>
+          <li>Architects / System Designers</li>
+          <li>End Users</li>
+        </ul>
+      </div>
+      <div class="output-box c3">
+        <span class="output-label">Output</span>
+        Future-state workflow and operating model
+      </div>
+    </div>
+
+    <!-- Col 4 -->
+    <div class="col c4">
+      <div class="col-header h4">
+        <div class="col-num">4</div>
+        <div>
+          <div class="col-title">FOUNDATION (WHAT ENABLES IT)</div>
+          <div class="col-sub">The essential data, tools and technology that make AI possible.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Identify required data sources (structured &amp; unstructured)</li>
+          <li>Assess data quality, accessibility, permissions and readiness</li>
+          <li>Select tools / models (AI/ML, LLMs, automation, etc.)</li>
+          <li>Design integrations (APIs, systems, platforms)</li>
+          <li>Build minimal viable foundation (avoid over-engineering)</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Data Teams</li>
+          <li>IT / Engineering</li>
+          <li>Security Teams</li>
+          <li>Architects</li>
+        </ul>
+      </div>
+      <div class="output-box c4">
+        <span class="output-label">Output</span>
+        Working technical foundation (data, tools, integrations)
+      </div>
+    </div>
+
+    <!-- Col 5 -->
+    <div class="col c5">
+      <div class="col-header h5">
+        <div class="col-num">5</div>
+        <div>
+          <div class="col-title">GOVERNANCE (CONTROL &amp; TRUST)</div>
+          <div class="col-sub">Ensure responsible, ethical and compliant use of AI across the organization.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Define AI usage policies and guardrails (allowed vs restricted)</li>
+          <li>Implement privacy, security and access controls</li>
+          <li>Establish risk, bias and accuracy checks</li>
+          <li>Set up monitoring, logging and auditability</li>
+          <li>Ensure compliance with legal and regulatory requirements</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Security / Compliance</li>
+          <li>Legal / Risk</li>
+          <li>IT Governance</li>
+          <li>Leadership (risk tolerance)</li>
+        </ul>
+        <div class="sub-label" style="margin-top:8px;">NIST AI RMF Cycle</div>
+        <div class="fw-cycle" style="padding:0 0;">
+          <div class="fw-cycle-step">Govern</div>
+          <div class="fw-cycle-step">Map</div>
+          <div class="fw-cycle-step">Measure</div>
+          <div class="fw-cycle-step">Manage</div>
+        </div>
+      </div>
+      <div class="fw-badges" style="padding:8px 16px 4px;">
+        <span class="fw-badge fw-nist">NIST AI RMF</span>
+        <span class="fw-badge fw-cobit">COBIT</span>
+      </div>
+      <div class="output-box c5">
+        <span class="output-label">Output</span>
+        Safe, compliant and governed AI environment
+      </div>
+    </div>
+
+    <!-- Col 6 -->
+    <div class="col c6">
+      <div class="col-header h6">
+        <div class="col-num">6</div>
+        <div>
+          <div class="col-title">EXECUTION (HOW IT HAPPENS)</div>
+          <div class="col-sub">Deliver AI solutions, embed in workflows and drive adoption.</div>
+        </div>
+      </div>
+      <div class="col-body">
+        <div class="sub-label">What Happens</div>
+        <ul class="bullet-list">
+          <li>Assign roles: Explorer, Operator, Architect, Orchestrator</li>
+          <li>Build → Test → Deploy in short, iterative cycles</li>
+          <li>Embed solution into workflow and systems</li>
+          <li>Train users and drive adoption</li>
+          <li>Continuously improve based on feedback</li>
+        </ul>
+        <div class="sub-label">Who Is Involved</div>
+        <ul class="bullet-list">
+          <li>Engineering / IT</li>
+          <li>Business Users</li>
+          <li>Transformation Team</li>
+          <li>Change Management</li>
+        </ul>
+      </div>
+      <div class="output-box c6">
+        <span class="output-label">Output</span>
+        Live AI-enabled processes in use by the business
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Measure section -->
+  <div class="measure-section-wrap">
+    <div class="measure-header">
+      <h2>MEASURE IMPACT (VALIDATION) – ENCOMPASSES ALL STEPS</h2>
+      <p>Measure outcomes, validate value and drive continuous improvement.</p>
+      <div class="fw-badges measure-header-badges">
+        <span class="fw-badge fw-itil">ITIL 7-Step Improvement</span>
+        <span class="fw-badge fw-pmbok">PMBOK</span>
+      </div>
+    </div>
+    <div class="measure-grid">
+      <div class="measure-block measure-col measure-col-what">
+        <div class="measure-block-title">What We Measure</div>
+        <div class="measure-sub-title">Efficiency</div>
+        <ul class="measure-items">
+          <li>Time saved</li>
+          <li>Cost reduction</li>
+          <li>Productivity gains</li>
+        </ul>
+        <div class="measure-sub-title">Quality</div>
+        <ul class="measure-items">
+          <li>Error reduction</li>
+          <li>Accuracy improvement</li>
+          <li>Consistency &amp; reliability</li>
+        </ul>
+        <div class="measure-sub-title">Capability</div>
+        <ul class="measure-items">
+          <li>New outputs</li>
+          <li>Faster decisions</li>
+          <li>Innovation / new value</li>
+        </ul>
+      </div>
+      <div class="measure-block measure-col measure-col-how">
+        <div class="measure-block-title">How We Measure</div>
+        <ul class="measure-items measure-items--lead">
+          <li>Establish baseline before implementation</li>
+          <li>Define KPIs for each use case</li>
+          <li>Track quantitative and qualitative outcomes</li>
+          <li>Compare against targets and benchmarks</li>
+          <li>Capture insights and lessons learned</li>
+        </ul>
+      </div>
+      <div class="measure-block measure-col measure-col-decisions">
+        <div class="measure-block-title">Decisions After Measure</div>
+        <div class="decisions-grid">
+          <div class="decision-box improve">
+            <div class="d-title">IMPROVE &amp; ITERATE</div>
+            <div class="d-body">Refine the solution, workflow or model and run the loop again.</div>
+          </div>
+          <div class="decision-box scale">
+            <div class="d-title">SCALE &amp; EXPAND</div>
+            <div class="d-body">Extend to more users, processes or business areas.</div>
+          </div>
+          <div class="decision-box stop">
+            <div class="d-title">STOP / REMOVE</div>
+            <div class="d-body">Discontinue if no longer aligned to value or impact.</div>
+          </div>
+        </div>
+      </div>
+      <div class="measure-block measure-block-itil aipo-section-hidden" aria-hidden="true">
+        <div class="measure-itil-inner">
+          <div class="measure-itil-steps">
+            <div class="measure-block-title measure-itil-title">ITIL 7-Step Improvement Process</div>
+            <ol class="measure-itil-list">
+              <li><span>Identify the improvement strategy</span></li>
+              <li><span>Define what you will measure</span></li>
+              <li><span>Gather the data</span></li>
+              <li><span>Process the data</span></li>
+              <li><span>Analyze the data</span></li>
+              <li><span>Present and use the information</span></li>
+              <li><span>Implement improvement</span></li>
+            </ol>
+          </div>
+          <p class="measure-itil-note">This loop maps directly to the &ldquo;Decisions After Measure&rdquo; cycle above—driving continual organizational learning and AI maturity beyond the initial deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="loop-bar">
+    <strong>Continuous Loop:</strong> Every use case goes through this end-to-end cycle to drive greater value, maturity and organizational transformation.
+  </div>
+</div>
+
+<script>
+(function () {
+  var cols = Array.from(document.querySelectorAll('.workflow-grid .col'));
+  var currentStep = 0;
+  var currentMode = 'all';
+
+  function applyView(mode, step) {
+    currentMode = mode;
+    currentStep = step;
+    var body = document.body;
+
+    body.classList.remove('step-mode-1', 'step-mode-2', 'step-mode-3');
+    document.querySelectorAll('.sc-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.mode === mode);
+    });
+
+    if (mode === 'all') {
+      cols.forEach(function (c) { c.classList.remove('step-visible', 'step-prev', 'step-next'); });
+      document.getElementById('scNav').style.display = 'none';
+      document.getElementById('scDots').style.display = 'none';
+      return;
+    }
+
+    var count = parseInt(mode, 10);
+    body.classList.add('step-mode-' + count);
+    document.getElementById('scNav').style.display = 'flex';
+    document.getElementById('scDots').style.display = 'flex';
+
+    var maxStep = cols.length - 1;
+    if (currentStep < 0) currentStep = 0;
+    if (currentStep > maxStep) currentStep = maxStep;
+
+    cols.forEach(function (c, i) {
+      c.classList.remove('step-visible', 'step-prev', 'step-next');
+      if (count === 1) {
+        if (i === currentStep) c.classList.add('step-visible');
+      } else if (count === 2) {
+        if (i === currentStep || i === currentStep + 1) c.classList.add('step-visible');
+      } else {
+        if (i >= currentStep - 1 && i <= currentStep + 1) {
+          c.classList.add('step-visible');
+          if (i === currentStep - 1) c.classList.add('step-prev');
+          if (i === currentStep + 1) c.classList.add('step-next');
+        }
+      }
+    });
+
+    var n = cols.length;
+    var label;
+    if (count === 1) {
+      label = 'Step ' + (currentStep + 1) + ' of ' + n;
+    } else if (count === 2) {
+      label = 'Steps ' + (currentStep + 1) + '\u2013' + Math.min(currentStep + 2, n) + ' of ' + n;
+    } else {
+      var first = Math.max(0, currentStep - 1) + 1;
+      var last = Math.min(currentStep + 1, n - 1) + 1;
+      label = 'Steps ' + first + '\u2013' + last + ' of ' + n;
+    }
+    document.getElementById('scCounter').textContent = label;
+    document.getElementById('prevBtn').disabled = currentStep === 0;
+    document.getElementById('nextBtn').disabled = currentStep >= maxStep;
+
+    var dotsEl = document.getElementById('scDots');
+    dotsEl.innerHTML = '';
+    cols.forEach(function (_, i) {
+      var d = document.createElement('span');
+      d.className = 'sc-dot' + (i === currentStep ? ' active' : '');
+      d.onclick = (function (idx) { return function () { applyView(currentMode, idx); }; })(i);
+      dotsEl.appendChild(d);
+    });
+  }
+
+  window.setStepMode = function (mode) { applyView(mode, currentStep); };
+  window.goStep = function (dir) { applyView(currentMode, currentStep + dir); };
+
+  applyView('all', 0);
+})();
+</script>
+</div>
+<script src="spa-nav.js"></script>
+</body>
+</html>
+

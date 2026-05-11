@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+ Organization – Pre-Flight Prerequisites</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="prereq-page">
+
+<script src="layout-loader.js"></script>
+
+<div id="aipo-content">
+
+<!-- ── PAGE ───────────────────────────────────────────── -->
+<div class="page">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <!--<div class="banner-eyebrow">Preparing Your Organization for AI Transformation</div>-->
+    <div class="banner-title">Before AI Can Transform,<br><em>the Ground Must Be Ready</em></div>
+    <div class="banner-desc">
+      AI does not create order out of chaos — it amplifies whatever already exists. Organizations that deploy AI on top of poorly defined processes, unclassified data, and weak governance will get faster, larger versions of their existing problems. These seven prerequisite domains are not optional steps you can skip. They are the foundation that makes AI investment safe, sustainable, and transformational rather than expensive and risky. <button class="why-link" onclick="toggleWhyStrip()">Why?</button>
+    </div>
+    <!--
+    <div class="banner-tags">
+      <span class="btag">Do This First</span>
+      <span class="btag">7 Domains</span>
+      <span class="btag">Cross-Cutting</span>
+      <span class="btag">Risk Reduction</span>
+      <span class="btag">AI Enablement</span>
+    </div>
+    -->
+  </div>
+
+  <!-- WHY IT MATTERS -->
+  <div class="why-strip-container">
+    <div class="why-strip" id="whyStrip" style="display:none;">
+      <div class="why-item">
+        <div class="why-title">AI Amplifies What Exists</div>
+        <div class="why-text">AI models learn from your data and automate your processes. If those are broken, biased, or undocumented, AI scales the problem — not the solution. Clean foundations produce clean outcomes.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-title">Governance Failures Are Costly</div>
+        <div class="why-text">Regulatory fines, data breaches, and reputational damage from AI missteps are far more expensive than building the right guardrails before launch. Governance is not a brake — it's a seatbelt.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-title">Speed Comes From Readiness</div>
+        <div class="why-text">Teams that invest in prerequisites move faster once AI deployment begins — fewer blockers, fewer rollbacks, faster adoption. Skipping this step creates the slowdowns it was trying to avoid.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- READINESS CALLOUT -->
+  <div class="readiness-bar">
+    <div class="readiness-bar-icon">💡</div>
+    <div class="readiness-bar-text">
+      <strong>How to use this page</strong>
+      For each domain below, review what "ready" looks like and identify your current gaps. You do not need to reach 100% before starting — but every unchecked gap is a known risk. Use the Assessment Checklist (Section ✓) to formally track and score your readiness across all 7 domains.
+    </div>
+  </div>
+
+  <!-- DOMAINS HEADING -->
+  <div class="sec-divider">
+    <div class="sec-divider-lbl">Prerequisite</div>
+    <div class="sec-divider-title">The 7 Foundation Domains</div>
+    <div class="sec-divider-sep"></div>
+    <div class="sec-divider-count">7 domains</div>
+  </div>
+
+  <!-- ── DOMAIN 1: PROCESS MATURITY ── -->
+  <div class="domain d1">
+    <div class="d-label">
+      <div class="d-pre">Domain 01</div>
+      <div class="d-name">Process Maturity</div>
+      <div class="d-sub">Defined, documented &amp; measurable workflows</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">AI automates, augments, or optimizes processes. If a process is not documented — if people perform it differently each time, or it only exists in the heads of experienced employees — there is nothing concrete for AI to learn from or act on. Undefined processes produce AI that is either inconsistent, impossible to validate, or actively harmful to quality.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>Key processes documented</strong> — step-by-step, with decision points, inputs, and outputs clearly defined.<br><br>
+          <strong>Process owners assigned</strong> — each process has a named owner responsible for its quality and accuracy.<br><br>
+          <strong>Performance baselines established</strong> — current cycle time, error rate, or cost is known, so AI improvement can be measured.<br><br>
+          <strong>Exception paths mapped</strong> — edge cases and exception-handling logic are documented, not just the happy path.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">Process maps / SOPs</span>
+            <span class="pill">RACI charts</span>
+            <span class="pill">Process KPIs & baselines</span>
+            <span class="pill">Exception &amp; escalation guides</span>
+            <span class="pill">Process owner register</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">Tribal knowledge is the primary process documentation · Different teams do the same task differently · No one can describe where a process starts and ends · Outcomes are measured, but the process producing them is not.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 2: DATA FOUNDATION ── -->
+  <div class="domain d2">
+    <div class="d-label">
+      <div class="d-pre">Domain 02</div>
+      <div class="d-name">Data Foundation &amp; Classification</div>
+      <div class="d-sub">Inventoried, classified &amp; quality-assured data</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">Data is the fuel for every AI system. Models trained on incomplete, inaccurate, or unclassified data produce unreliable outputs. Without data classification, you cannot know which data an AI is allowed to access, which must stay private, and which requires special handling. Without a data inventory, AI projects will constantly stall on "where does this data live?" and "is this data trustworthy?"</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>Data inventory</strong> — a catalogue of all major datasets: location, owner, format, update frequency, and quality status.<br><br>
+          <strong>Data classification scheme</strong> — at minimum: Public · Internal · Confidential · Restricted/PII. Each dataset classified and labeled.<br><br>
+          <strong>Data quality standards</strong> — completeness, accuracy, consistency, and timeliness targets defined per dataset.<br><br>
+          <strong>Data lineage</strong> — for critical datasets, the origin, transformations, and consumption points are documented.<br><br>
+          <strong>Data ownership</strong> — every dataset has a named owner accountable for its quality and classification.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">Data catalogue / inventory</span>
+            <span class="pill">Classification policy</span>
+            <span class="pill">Data quality scorecard</span>
+            <span class="pill">Data lineage diagrams</span>
+            <span class="pill">Data ownership register</span>
+            <span class="pill">Labeling standards</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">No one knows what data exists or where · Sensitive data is in spreadsheets with no access controls · Different systems hold conflicting versions of the same record · Data quality varies wildly across teams.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 3: INFORMATION SECURITY ── -->
+  <div class="domain d3">
+    <div class="d-label">
+      <div class="d-pre">Domain 03</div>
+      <div class="d-name">Information Security</div>
+      <div class="d-sub">Policies, controls &amp; access governance</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">AI systems often have broad access to data across an organization — far broader than any individual user. Without strong information security, an AI model can become a data exfiltration vector, an attack surface for adversarial inputs, or a compliance liability. Security must be designed into AI systems from day one, not bolted on after an incident.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>Information security policy</strong> — formally documented and approved, covering data handling, access, and incident response.<br><br>
+          <strong>Identity &amp; Access Management (IAM)</strong> — role-based access control (RBAC) enforced; least-privilege principle applied to all AI service accounts and integrations.<br><br>
+          <strong>Secure development practices</strong> — AI model training pipelines, APIs, and deployment environments follow secure coding and configuration standards.<br><br>
+          <strong>Secrets management</strong> — API keys, credentials, and tokens used by AI systems are stored in vaults, never hardcoded.<br><br>
+          <strong>Incident response plan</strong> — a documented, tested plan for AI-related security events including model poisoning and data leakage.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">Information Security Policy</span>
+            <span class="pill">IAM / RBAC matrix</span>
+            <span class="pill">Least-privilege standards</span>
+            <span class="pill">Secrets management solution</span>
+            <span class="pill">Incident response plan</span>
+            <span class="pill">Pen-test / security review process</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">Shared logins used by AI services · API keys in source code repositories · No formal review process before a new AI tool is connected to internal data · No one is responsible for AI security posture.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 4: PRIVACY & COMPLIANCE ── -->
+  <div class="domain d4">
+    <div class="d-label">
+      <div class="d-pre">Domain 04</div>
+      <div class="d-name">Privacy &amp; Regulatory Compliance</div>
+      <div class="d-sub">PII mapping, legal landscape &amp; review capability</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">AI systems that process personal data are subject to privacy regulations (GDPR, CCPA, HIPAA, and equivalents). AI that makes decisions affecting individuals — hiring, lending, insurance, healthcare — faces specific legal scrutiny around algorithmic accountability. Without a compliance baseline, AI deployment can create legal liability overnight, particularly when models are exposed externally.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>PII mapping</strong> — all personal data the organization holds is identified, mapped to its purpose, and has a legal basis for processing.<br><br>
+          <strong>Regulatory landscape documented</strong> — the applicable regulations (by region, industry, and data type) are known and monitored for changes.<br><br>
+          <strong>Privacy by design standard</strong> — data minimization and purpose limitation are applied by default when building AI systems.<br><br>
+          <strong>Legal review capability</strong> — a process exists to route new AI use cases through legal and compliance review before deployment.<br><br>
+          <strong>Data retention &amp; deletion policies</strong> — including how to honor right-to-erasure requests when data has been used to train a model.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">Data Processing Register (ROPA)</span>
+            <span class="pill">PII inventory &amp; map</span>
+            <span class="pill">Privacy policy &amp; notices</span>
+            <span class="pill">Regulatory compliance matrix</span>
+            <span class="pill">AI legal review checklist</span>
+            <span class="pill">Consent management framework</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">No one knows which regulations apply to a new AI use case · Customer PII flows freely through internal tools without consent tracking · Legal is not consulted until after an AI system is built · No process for handling AI data deletion requests.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 5: TECHNOLOGY BASELINE ── -->
+  <div class="domain d5">
+    <div class="d-label">
+      <div class="d-pre">Domain 05</div>
+      <div class="d-name">Technology &amp; Integration Baseline</div>
+      <div class="d-sub">Cloud readiness, APIs &amp; platform standards</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">AI systems do not run in isolation — they need to read from and write to existing systems, consume data from multiple sources, and operate reliably at scale. Without a clear technology baseline, every AI project starts by re-solving the same integration problems. Inconsistent cloud platforms, undocumented APIs, and absent identity standards add months to every AI deployment and create fragile, hard-to-maintain systems.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>Cloud platform decision</strong> — the organization has selected and standardized on a cloud provider (or hybrid strategy), with AI/ML services available and approved.<br><br>
+          <strong>API standards &amp; catalogue</strong> — internal APIs are documented, versioned, and follow a consistent standard (REST/GraphQL/gRPC). A service catalogue exists.<br><br>
+          <strong>Identity platform</strong> — a single identity and SSO layer that AI systems can integrate with for authentication and authorization.<br><br>
+          <strong>Observability standards</strong> — logging, monitoring, and alerting standards that AI services must follow to be production-ready.<br><br>
+          <strong>Deployment pipeline</strong> — CI/CD practices that include security scanning, testing gates, and approval workflows before promoting AI models to production.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">Cloud architecture decision</span>
+            <span class="pill">API catalogue &amp; standards</span>
+            <span class="pill">Identity / SSO platform</span>
+            <span class="pill">CI/CD pipeline standards</span>
+            <span class="pill">Observability framework</span>
+            <span class="pill">Infrastructure-as-code templates</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">Every AI project requires a custom integration from scratch · Internal APIs are undocumented or inconsistent · No logging or monitoring standards mean AI systems run blind · Cloud usage is uncoordinated across teams.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 6: PEOPLE & CHANGE READINESS ── -->
+  <div class="domain d6">
+    <div class="d-label">
+      <div class="d-pre">Domain 06</div>
+      <div class="d-name">People &amp; Change Readiness</div>
+      <div class="d-sub">AI literacy, buy-in &amp; change capability</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">The most technically perfect AI system fails if people won't use it, don't understand it, or actively resist it. AI transformation is fundamentally a people change programme. Without baseline AI literacy, employees cannot make good decisions about when to trust AI output, when to override it, and how to identify errors. Without leadership buy-in and change management capability, adoption stalls at the pilot stage.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>AI literacy baseline</strong> — all employees have a foundational understanding of what AI is, what it can and cannot do, and how it will affect their roles.<br><br>
+          <strong>Leadership sponsorship</strong> — named executives own and visibly champion the AI transformation with resources, decisions, and communications.<br><br>
+          <strong>Change management capability</strong> — an established approach (internal team or partner) for managing organizational change, communication, and adoption.<br><br>
+          <strong>Reskilling pathways</strong> — a plan for upskilling roles that will be most affected by AI, so transformation feels like growth, not threat.<br><br>
+          <strong>Feedback mechanisms</strong> — channels for employees to raise concerns, report issues with AI systems, and contribute improvement ideas.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">AI literacy curriculum</span>
+            <span class="pill">Executive sponsorship charter</span>
+            <span class="pill">Change management plan</span>
+            <span class="pill">Stakeholder impact assessment</span>
+            <span class="pill">Reskilling roadmap</span>
+            <span class="pill">Employee feedback channels</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">Employees view AI as a threat to their jobs with no counter-narrative · AI initiatives are IT-led with no business ownership · No training plan exists beyond vendor demos · Leadership endorses AI in town halls but doesn't fund it in planning.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── DOMAIN 7: ETHICS & AI PRINCIPLES ── -->
+  <div class="domain d7">
+    <div class="d-label">
+      <div class="d-pre">Domain 07</div>
+      <div class="d-name">Ethics &amp; AI Principles</div>
+      <div class="d-sub">Values, accountability &amp; responsible use standards</div>
+    </div>
+    <div class="d-body">
+      <div class="d-row">
+        <div class="d-row-key">Why AI needs this</div>
+        <div class="d-row-val">AI systems make decisions and take actions at a scale and speed no human team can match. Without explicit ethical principles and accountability structures, AI will optimize for the wrong objectives, embed and amplify bias, and make decisions that are impossible to explain or contest. Ethics is not a values exercise — it is a risk management requirement that protects both the people affected by AI and the organization deploying it.</div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">What to have in place</div>
+        <div class="d-row-val">
+          <strong>Adopted AI principles</strong> — the organization has formally articulated its AI values: fairness, transparency, accountability, human oversight, and explainability at minimum.<br><br>
+          <strong>AI ethics owner</strong> — a named role or committee responsible for reviewing AI decisions against the organization's principles.<br><br>
+          <strong>Bias assessment process</strong> — a repeatable methodology for testing models for demographic bias, proxy discrimination, and distributional shift before deployment.<br><br>
+          <strong>Explainability standards</strong> — for AI decisions affecting individuals, the organization can provide a meaningful explanation of how the outcome was reached.<br><br>
+          <strong>Escalation &amp; override paths</strong> — clear, accessible ways for affected individuals and internal teams to flag, challenge, or override AI outputs.
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Key artifacts</div>
+        <div class="d-row-val">
+          <div class="pills">
+            <span class="pill">AI Ethics Policy</span>
+            <span class="pill">AI Principles charter</span>
+            <span class="pill">Bias testing methodology</span>
+            <span class="pill">Explainability standard</span>
+            <span class="pill">Ethics review board / TOR</span>
+            <span class="pill">Override &amp; appeal process</span>
+          </div>
+        </div>
+      </div>
+      <div class="d-row">
+        <div class="d-row-key">Common gap signals</div>
+        <div class="d-row-val">No one can articulate what "responsible AI" means in practice for this organization · Models are deployed without bias testing · Affected individuals have no way to contest an AI decision · Ethics discussions happen only after a problem surfaces publicly.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPENDENCY MATRIX (temporarily hidden — remove .aipo-section-hidden wrapper to show) -->
+  <div class="aipo-section-hidden" aria-hidden="true">
+  <div class="sec-divider" style="margin-top:0;">
+    <div class="sec-divider-lbl">Reference</div>
+    <div class="sec-divider-title">Prerequisite Dependency by AI Use Case Type</div>
+    <div class="sec-divider-sep"></div>
+  </div>
+
+  <div class="matrix-wrap">
+    <div class="matrix-header">
+      How much does each AI use case type depend on each prerequisite domain?
+      <span>● Critical &nbsp;● High &nbsp;● Moderate &nbsp;● Low</span>
+    </div>
+    <table class="dep-table">
+      <thead>
+        <tr>
+          <th>AI Use Case Type</th>
+          <th>Process<br>Maturity</th>
+          <th>Data<br>Foundation</th>
+          <th>Info<br>Security</th>
+          <th>Privacy &amp;<br>Compliance</th>
+          <th>Tech<br>Baseline</th>
+          <th>People &amp;<br>Change</th>
+          <th>Ethics &amp;<br>Principles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Automation — replacing repetitive tasks</td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-mod"  title="Moderate"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-mod"  title="Moderate"></span></td>
+        </tr>
+        <tr>
+          <td>Augmentation — assisting human workers</td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+        </tr>
+        <tr>
+          <td>Generation — creating content or code</td>
+          <td><span class="dot dot-mod"  title="Moderate"></span></td>
+          <td><span class="dot dot-mod"  title="Moderate"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+        </tr>
+        <tr>
+          <td>Prediction — forecasting outcomes &amp; trends</td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-mod"  title="Moderate"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+        </tr>
+        <tr>
+          <td>Optimization — recommending best actions</td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-high" title="High"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+        </tr>
+        <tr>
+          <td>Autonomous agents — AI acting independently</td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+          <td><span class="dot dot-crit" title="Critical"></span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="dep-legend">
+      <span><span class="dot dot-crit"></span> Critical — required before deployment</span>
+      <span><span class="dot dot-high"></span> High — strongly recommended</span>
+      <span><span class="dot dot-mod"></span> Moderate — address early in the project</span>
+      <span><span class="dot dot-low"></span> Low — awareness sufficient</span>
+    </div>
+  </div>
+  </div>
+
+</div><!-- /.page -->
+
+<script>
+window.toggleWhyStrip = function () {
+  var strip = document.getElementById('whyStrip');
+  if (!strip) return;
+  var btn = document.querySelector('.why-strip-toggle');
+  var hidden = strip.style.display === 'none' || strip.style.display === '';
+  strip.style.display = hidden ? 'grid' : 'none';
+  if (btn && btn.querySelector('.toggle-label')) {
+    btn.classList.toggle('open', hidden);
+    btn.querySelector('.toggle-label').textContent = hidden ? 'Hide Context' : 'Show Context';
+  }
+};
+</script>
+
+</div>
+<script src="spa-nav.js"></script>
+
+</body>
+</html>
+

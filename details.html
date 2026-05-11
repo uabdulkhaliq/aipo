@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+ Organization Framework – Detailed Steps</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="details-page">
+
+<script src="layout-loader.js"></script>
+
+<div id="aipo-content">
+
+<div class="page-header">
+  <h1>AI+ ORGANIZATION FRAMEWORK – DETAILED STEPS</h1>
+  <p>A deep-dive into each framework step: what it is, how it works and what success looks like.</p>
+</div>
+
+<div class="step-controls">
+  <div class="sc-modes">
+    <button class="sc-btn" data-mode="all"  onclick="setStepMode('all')">All Steps</button>
+    <button class="sc-btn" data-mode="1"    onclick="setStepMode('1')">1 Step</button>
+    <button class="sc-btn" data-mode="3"    onclick="setStepMode('3')">3 Steps</button>
+  </div>
+  <div class="sc-nav" id="scNav">
+    <button class="sc-arrow" id="prevBtn" onclick="goStep(-1)">&#8592; Prev</button>
+    <span class="sc-counter" id="scCounter">Step 1 of 6</span>
+    <button class="sc-arrow" id="nextBtn" onclick="goStep(1)">Next &#8594;</button>
+  </div>
+  <div class="sc-dots" id="scDots"></div>
+</div>
+
+<div class="page">
+
+  <!-- Card 1 - Value -->
+  <div class="card c1">
+    <div class="card-header">
+      <div class="card-num">1</div>
+      <div>
+        <div class="card-title">VALUE (WHY)</div>
+        <div class="card-sub">Defines the core outcomes the organization wants to achieve with AI.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-itil">ITIL SVS</span>
+        <span class="fw-badge fw-pmbok">PMBOK</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">Without a clear definition of value, AI efforts become technology-driven and lose focus. Value alignment ensures every AI initiative is tied to business priorities and creates measurable impact.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Aligns AI investments with business strategy</li>
+          <li>Prioritizes what matters most</li>
+          <li>Provides a clear North Star for decision-making</li>
+          <li>Enables consistent success measurement</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">VALUE DIMENSIONS</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Efficiency</div><div class="item-val">Do things faster and at lower cost. Reduce time, manual effort and operational spend.</div></div>
+      <div class="item-row"><div class="item-key">Quality</div><div class="item-val">Do things better with fewer errors. Improve accuracy, consistency and reliability.</div></div>
+      <div class="item-row"><div class="item-key">Capability</div><div class="item-val">Enable new outcomes and possibilities. Create new products, services and business models.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: ITIL SVS + PMBOK</summary>
+      <div class="fw-panel-body">
+        <p><strong>ITIL Service Value System (SVS)</strong> frames value as co-creation between the organization and its stakeholders—not purely internal benefit. Each AI initiative should ask: what value does this create for end-users and partners, not just the business?</p>
+        <p><strong>PMBOK Benefit Realization Plan:</strong></p>
+        <ul>
+          <li>Map each AI initiative to an explicit benefits owner</li>
+          <li>Define the baseline state (current), target state (expected), and realization timeline</li>
+          <li>Schedule a Benefits Realization Review at 30/90/180 days post-deployment</li>
+        </ul>
+      </div>
+    </details>
+    <div class="callout">When value is clear, AI becomes a force multiplier for business outcomes—not just another tool.</div>
+  </div>
+
+  <!-- Card 2 - Use Cases -->
+  <div class="card c2">
+    <div class="card-header">
+      <div class="card-num">2</div>
+      <div>
+        <div class="card-title">USE CASES (WHERE)</div>
+        <div class="card-sub">Standardized ways AI is applied across the organization.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-pmbok">PMBOK</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">AI can be applied in many ways. A standardized set of use case types creates a common language, helps spot opportunities, and ensures repeatability at scale.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Identifies high-impact opportunities</li>
+          <li>Encourages reuse of patterns and learnings</li>
+          <li>Speeds up ideation and prioritization</li>
+          <li>Supports scaling AI across functions</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">USE CASE TYPES</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Automation</div><div class="item-val">AI replaces repetitive, rule-based tasks end-to-end.</div></div>
+      <div class="item-row"><div class="item-key">Augmentation</div><div class="item-val">AI assists humans to be more productive and effective.</div></div>
+      <div class="item-row"><div class="item-key">Generation</div><div class="item-val">AI creates new content, code, designs, or ideas.</div></div>
+      <div class="item-row"><div class="item-key">Prediction</div><div class="item-val">AI forecasts outcomes, trends or behaviors.</div></div>
+      <div class="item-row"><div class="item-key">Optimization</div><div class="item-val">AI recommends the best actions or allocation of resources.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: PMBOK Stakeholder Performance Domain</summary>
+      <div class="fw-panel-body">
+        <p><strong>PMBOK's Stakeholder Performance Domain</strong> introduces the <strong>Power/Interest Grid</strong> as a tool for prioritizing which use cases to pursue based on stakeholder influence and engagement level.</p>
+        <p><strong>Grid quadrants:</strong></p>
+        <ul>
+          <li>High Power / High Interest: Manage closely</li>
+          <li>High Power / Low Interest: Keep satisfied</li>
+          <li>Low Power / High Interest: Keep informed</li>
+          <li>Low Power / Low Interest: Monitor</li>
+        </ul>
+        <p><strong>Risk note:</strong> Without stakeholder mapping, use case portfolios fragment—high-interest but low-power users drive pilots that never get executive sponsorship to scale.</p>
+        <p><strong>Action:</strong> Score each use case candidate against: Who sponsors it? Who uses it? Who blocks it? Prioritize use cases that satisfy high-power / high-interest sponsors.</p>
+      </div>
+    </details>
+    <div class="callout">Use cases turn AI potential into practical, repeatable solutions that drive real business results.</div>
+  </div>
+
+  <!-- Card 3 - Operating Model -->
+  <div class="card c3">
+    <div class="card-header">
+      <div class="card-num">3</div>
+      <div>
+        <div class="card-title">OPERATING MODEL (HOW)</div>
+        <div class="card-sub">Defines how humans and AI work together in real workflows.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-itil">ITIL 4 Dimensions</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">AI doesn't create value by itself—people do. A clear operating model defines the right balance of human judgment and AI capabilities for different types of work.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Clarifies roles and responsibilities</li>
+          <li>Ensures the right level of human involvement</li>
+          <li>Builds trust and adoption</li>
+          <li>Improves decision quality and accountability</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">OPERATING MODEL MODES</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Assistive<br><span style="font-weight:400;font-size:0.72rem;color:#777">(Human in Control)</span></div><div class="item-val">AI provides recommendations or information. Humans make decisions and take action.</div></div>
+      <div class="item-row"><div class="item-key">Co-Pilot<br><span style="font-weight:400;font-size:0.72rem;color:#777">(AI + Human Collaboration)</span></div><div class="item-val">AI and humans collaborate throughout the process. Decisions are shared.</div></div>
+      <div class="item-row"><div class="item-key">Autonomous<br><span style="font-weight:400;font-size:0.72rem;color:#777">(AI in Control, Human Oversees)</span></div><div class="item-val">AI executes tasks or decisions independently. Humans oversee, intervene when needed.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: ITIL 4 Dimensions of Service Management</summary>
+      <div class="fw-panel-body">
+        <p><strong>ITIL's 4 Dimensions model</strong> ensures AI services are designed holistically—not just as technology solutions.</p>
+        <ul>
+          <li><strong>Organizations & People:</strong> Define an "AI Service Owner" role per service—accountable for outcomes, not just delivery. Aligns to ITIL's service ownership model.</li>
+          <li><strong>Information & Technology:</strong> Maps directly to the existing Foundation pillar (Data, Tools, Integration).</li>
+          <li><strong>Partners & Suppliers:</strong> Formalize relationships with AI cloud providers (OpenAI, Azure AI, AWS Bedrock) via vendor management—SLAs, data handling agreements, exit strategies.</li>
+          <li><strong>Value Streams & Processes:</strong> Map the end-to-end flow from data ingestion through AI inference to business output for each use case. Identify handoff points and failure modes.</li>
+        </ul>
+        <p><strong>Note:</strong> Every operating model mode (Assistive, Co-Pilot, Autonomous) maps to a different ITIL value stream configuration.</p>
+      </div>
+    </details>
+    <div class="callout">The right operating model maximizes AI impact while keeping humans in the loop where it matters.</div>
+  </div>
+
+  <!-- Card 4 - Foundation -->
+  <div class="card c4">
+    <div class="card-header">
+      <div class="card-num">4</div>
+      <div>
+        <div class="card-title">FOUNDATION (WHAT ENABLES IT)</div>
+        <div class="card-sub">The essential data, tools and technology that make AI possible.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-itil">ITIL Design & Transition</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">AI is only as good as the foundation it runs on. Strong data, modern tools and seamless integration ensure AI can be trusted, scalable and impactful.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Provides high-quality, accessible data for AI</li>
+          <li>Ensures the right tools and models are available</li>
+          <li>Enables secure and seamless integration</li>
+          <li>Builds a scalable, future-ready AI platform</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">FOUNDATION PILLARS</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Data</div><div class="item-val">High quality, accessible and governed data (structured, unstructured and tacit knowledge).</div></div>
+      <div class="item-row"><div class="item-key">Tools / Models</div><div class="item-val">AI/ML models, LLMs, platforms and automation tools.</div></div>
+      <div class="item-row"><div class="item-key">Integration</div><div class="item-val">APIs, systems, workflows and infrastructure integration that enable AI to work at scale.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: ITIL Service Design & Transition</summary>
+      <div class="fw-panel-body">
+        <p>Treat each Foundation component (Data pipelines, AI models, Integration APIs) as a <strong>service</strong> with a formal Service Design Package—not merely a technical artifact.</p>
+        <ul>
+          <li><strong>Internal AI Service Catalogue:</strong> Publish a catalogue of available AI capabilities (e.g., "Document Summarization Service", "Demand Forecasting API") with SLAs, data requirements, and approved use cases. This prevents redundant builds and enables reuse.</li>
+          <li><strong>CI/CD Pipelines as Consumable Services:</strong> Model training pipelines, prompt versioning, and deployment pipelines should be standardized, documented, and available to all teams—not owned by individual project teams.</li>
+          <li><strong>ITIL Service Transition:</strong> Before promoting any AI capability to production, run a formal transition gate: configuration baseline, test evidence, rollback plan, and service acceptance criteria.</li>
+        </ul>
+      </div>
+    </details>
+    <div class="callout">A strong foundation reduces risk, increases performance and unlocks the full potential of AI.</div>
+  </div>
+
+  <!-- Card 5 - Governance -->
+  <div class="card c5">
+    <div class="card-header">
+      <div class="card-num">5</div>
+      <div>
+        <div class="card-title">GOVERNANCE (CONTROL &amp; TRUST)</div>
+        <div class="card-sub">Ensures responsible, ethical and compliant use of AI across the organization.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-nist">NIST AI RMF</span>
+        <span class="fw-badge fw-cobit">COBIT</span>
+        <span class="fw-badge fw-pmbok">PMBOK</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">AI introduces new risks—privacy, bias, security, and compliance. Governance provides guardrails that protect people, the business and the brand.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Protects data, privacy and security</li>
+          <li>Mitigates bias and inaccuracies</li>
+          <li>Ensures regulatory compliance</li>
+          <li>Builds transparency and trust</li>
+          <li>Enables responsible innovation</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">GOVERNANCE AREAS</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Privacy &amp; Security</div><div class="item-val">Protect data, ensure access controls and maintain security.</div></div>
+      <div class="item-row"><div class="item-key">Risk (Bias &amp; Accuracy)</div><div class="item-val">Identify and mitigate bias, inaccuracies and risks.</div></div>
+      <div class="item-row"><div class="item-key">Compliance</div><div class="item-val">Meet regulatory and legal obligations.</div></div>
+      <div class="item-row"><div class="item-key">Auditability &amp; Control</div><div class="item-val">Ensure transparency, traceability and human control.</div></div>
+      <div class="item-row"><div class="item-key">Model Risk vs Output Risk</div><div class="item-val">Model risk: the model behaves unexpectedly (drift, bias, miscalibration). Output risk: the model's output causes harm in context (hallucination accepted as fact, incorrect recommendation acted upon). Both require distinct monitoring and response plans.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: NIST AI RMF + COBIT + PMBOK</summary>
+      <div class="fw-panel-body">
+        <p><strong>NIST AI RMF Govern-Map-Measure-Manage Cycle:</strong></p>
+        <div class="fw-cycle">
+          <div class="fw-cycle-step">Govern</div>
+          <div class="fw-cycle-step">Map</div>
+          <div class="fw-cycle-step">Measure</div>
+          <div class="fw-cycle-step">Manage</div>
+        </div>
+        <ul>
+          <li><strong>Govern:</strong> Establish AI risk culture, policies, accountability structures (Ethics Review Board as formal IT Governance body per COBIT)</li>
+          <li><strong>Map:</strong> Identify context, categorize AI use by risk tier (model risk vs output risk—these are distinct)</li>
+          <li><strong>Measure:</strong> Quantify risks—bias metrics, hallucination rates, model drift indicators</li>
+          <li><strong>Manage:</strong> Respond using PMBOK Risk Response Plans—separate plans for model drift risk vs output quality risk</li>
+        </ul>
+        <p><strong>COBIT Addition:</strong> Separate the "AI Ethics Owner" structurally from the Execution team. This role reports to the Governance function, not to delivery. Mirrors COBIT's separation of IT governance from IT management.</p>
+        <hr style="margin:10px 0;border:none;border-top:1px solid var(--border);">
+        <p style="font-size:0.73rem;font-weight:700;text-transform:uppercase;color:var(--navy);margin-bottom:6px;">📥 Official Resources &amp; Tools</p>
+        <ul style="font-size:0.73rem;list-style:none;padding:0;margin:0;">
+          <li style="padding:2px 0 2px 16px;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">→</span><a href="https://nvlpubs.nist.gov/nistpubs/ai/nist.ai.100-1.pdf" target="_blank" style="color:#1e4fa0;text-decoration:none;">NIST AI RMF 1.0 Core Framework (PDF)</a></li>
+          <li style="padding:2px 0 2px 16px;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">→</span><a href="https://airc.nist.gov/docs/AI_RMF_Playbook.pdf" target="_blank" style="color:#1e4fa0;text-decoration:none;">NIST AI RMF Playbook (PDF)</a></li>
+          <li style="padding:2px 0 2px 16px;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">→</span><a href="https://www.isaca.org/resources/cobit" target="_blank" style="color:#1e4fa0;text-decoration:none;">COBIT Governance Toolkit (Excel)</a></li>
+          <li style="padding:2px 0 2px 16px;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">→</span><a href="https://audit-now.com/templates/cobit-data-governance-audit-checklist-559/" target="_blank" style="color:#1e4fa0;text-decoration:none;">COBIT Data Governance Checklist (PDF)</a></li>
+          <li style="padding:2px 0 2px 16px;position:relative;"><span style="position:absolute;left:0;color:var(--teal);">→</span><a href="https://www.pmi.org/kickoff" target="_blank" style="color:#1e4fa0;text-decoration:none;">PMI Risk Management Course (Free)</a></li>
+        </ul>
+      </div>
+    </details>
+    <div class="callout">Good governance reduces risk and builds trust—the foundation of sustainable AI.</div>
+  </div>
+
+  <!-- Card 6 - Execution -->
+  <div class="card c6">
+    <div class="card-header">
+      <div class="card-num">6</div>
+      <div>
+        <div class="card-title">EXECUTION (HOW IT HAPPENS)</div>
+        <div class="card-sub">How the organization delivers AI transformation and realizes value.</div>
+      </div>
+      <div class="fw-badges">
+        <span class="fw-badge fw-pmbok">PMBOK Tailoring</span>
+        <span class="fw-badge fw-itil">ITIL Continual Improvement</span>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="col-block">
+        <div class="col-label">Why It's Needed</div>
+        <div class="col-body">Strategy without execution doesn't create value. A clear execution approach, the right roles, and disciplined delivery turn AI strategy into measurable outcomes at scale.</div>
+      </div>
+      <div class="col-block">
+        <div class="col-label">How It Helps</div>
+        <div class="col-body"><ul>
+          <li>Provides a clear path from idea to impact</li>
+          <li>Ensures the right people and skills are in place</li>
+          <li>Focuses effort on high-impact opportunities</li>
+          <li>Drives adoption and change management</li>
+          <li>Delivers measurable outcomes continuously</li>
+        </ul></div>
+      </div>
+    </div>
+    <div class="section-label">EXECUTION COMPONENTS</div>
+    <div class="item-table">
+      <div class="item-row"><div class="item-key">Approach</div><div class="item-val">Choose the right delivery approach: framework-driven for scale and consistency, hierarchical (top-down) for alignment and control, or pragmatic (bottom-up) for speed and innovation.</div></div>
+      <div class="item-row"><div class="item-key">Roles</div><div class="item-val">Define and align key roles: Explorer (discover), Operator (execute), Architect (design), Orchestrator (scale and govern).</div></div>
+      <div class="item-row"><div class="item-key">Prioritization</div><div class="item-val">Focus on high-impact use cases based on business impact, feasibility and effort.</div></div>
+      <div class="item-row"><div class="item-key">Adoption</div><div class="item-val">Build capability, drive training and manage change for lasting adoption.</div></div>
+    </div>
+    <details class="fw-panel">
+      <summary>Framework Alignment: PMBOK Tailoring + ITIL Continual Improvement</summary>
+      <div class="fw-panel-body">
+        <p><strong>PMBOK Tailoring Principle:</strong> Delivery approach is not one-size-fits-all.</p>
+        <ul>
+          <li><strong>Predictive (Waterfall) lifecycle →</strong> use for Foundation building (data platforms, MLOps pipelines, governance frameworks). Requirements are known; scope is bounded.</li>
+          <li><strong>Adaptive (Agile) lifecycle →</strong> use for Generative AI pilots and use-case experimentation. Requirements emerge; outcomes are uncertain.</li>
+          <li><strong>Hybrid →</strong> use for scaling proven pilots into enterprise-wide solutions.</li>
+        </ul>
+        <p><strong>ITIL 7-Step Improvement Process</strong> for the Measure Impact loop:</p>
+        <ol style="margin-left: 12px;">
+          <li>Identify the improvement strategy</li>
+          <li>Define what you will measure</li>
+          <li>Gather the data</li>
+          <li>Process the data</li>
+          <li>Analyze the data</li>
+          <li>Present and use the information</li>
+          <li>Implement improvement</li>
+        </ol>
+        <p><strong>Note:</strong> The "7-step process" maps directly to this playbook's Measure Impact stage in the Workflow section.</p>
+      </div>
+    </details>
+    <div class="callout">Effective execution ensures AI initiatives are delivered on time, on budget and at the quality needed to create lasting business value.</div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var cards = Array.from(document.querySelectorAll('.page > .card'));
+  var currentStep = 0;
+  var currentMode = 'all';
+
+  function applyView(mode, step) {
+    currentMode = mode;
+    currentStep = step;
+    var body = document.body;
+
+    // Remove all step-mode classes
+    body.classList.remove('step-mode-1', 'step-mode-2', 'step-mode-3');
+
+    // Update button active state
+    document.querySelectorAll('.sc-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.mode === mode);
+    });
+
+    if (mode === 'all') {
+      cards.forEach(function (c) {
+        c.classList.remove('step-visible', 'step-prev', 'step-next');
+      });
+      document.getElementById('scNav').style.display = 'none';
+      document.getElementById('scDots').style.display = 'none';
+      return;
+    }
+
+    var count = parseInt(mode, 10);
+    body.classList.add('step-mode-' + count);
+    document.getElementById('scNav').style.display = 'flex';
+    document.getElementById('scDots').style.display = 'flex';
+
+    // Clamp step
+    var maxStep = cards.length - 1;
+    if (currentStep < 0) currentStep = 0;
+    if (currentStep > maxStep) currentStep = maxStep;
+
+    cards.forEach(function (c, i) {
+      c.classList.remove('step-visible', 'step-prev', 'step-next');
+
+      if (count === 1) {
+        if (i === currentStep) c.classList.add('step-visible');
+      } else if (count === 2) {
+        if (i === currentStep || i === currentStep + 1) c.classList.add('step-visible');
+      } else { // 3
+        if (i >= currentStep - 1 && i <= currentStep + 1) {
+          c.classList.add('step-visible');
+          if (i === currentStep - 1) c.classList.add('step-prev');
+          if (i === currentStep + 1) c.classList.add('step-next');
+        }
+      }
+    });
+
+    // Update counter & dots
+    var n = cards.length;
+    var label;
+    if (count === 1) {
+      label = 'Step ' + (currentStep + 1) + ' of ' + n;
+    } else if (count === 2) {
+      label = 'Steps ' + (currentStep + 1) + '\u2013' + Math.min(currentStep + 2, n) + ' of ' + n;
+    } else {
+      var first = Math.max(0, currentStep - 1) + 1;
+      var last = Math.min(currentStep + 1, n - 1) + 1;
+      label = 'Steps ' + first + '\u2013' + last + ' of ' + n;
+    }
+    document.getElementById('scCounter').textContent = label;
+    document.getElementById('prevBtn').disabled = currentStep === 0;
+    document.getElementById('nextBtn').disabled = currentStep >= maxStep;
+
+    var dotsEl = document.getElementById('scDots');
+    dotsEl.innerHTML = '';
+    cards.forEach(function (_, i) {
+      var d = document.createElement('span');
+      d.className = 'sc-dot' + (i === currentStep ? ' active' : '');
+      d.onclick = (function (idx) { return function () { applyView(currentMode, idx); }; })(i);
+      dotsEl.appendChild(d);
+    });
+  }
+
+  window.setStepMode = function (mode) { applyView(mode, currentStep); };
+  window.goStep = function (dir) { applyView(currentMode, currentStep + dir); };
+
+  // Init
+  applyView('all', 0);
+})();
+</script>
+</div>
+<script src="spa-nav.js"></script>
+</body>
+</html>
+

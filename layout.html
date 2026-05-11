@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Template</title>
+</head>
+<body>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="sh-icon" style="font-size:.72rem;font-weight:800;">AI+</div>
+  <div>
+    <div class="sh-title">AI+ Organization</div>
+    <div class="sh-sub">Transformation Playbook</div>
+  </div>
+  <span class="sh-badge">v1.0 · 2026</span>
+  <button class="view-toggle-btn" onclick="toggleView()">
+    <span id="viewLabel">Full Width</span>
+  </button>
+</header>
+
+<script>
+  function applyView(v) {
+    document.body.className = document.body.className.replace(/view-\w+/g, '');
+    document.body.classList.add('view-' + v);
+    var l = document.getElementById('viewLabel');
+    if (l) {
+      var labels = { boxed: 'Boxed', full: 'Full Width', clean: 'Full Width' };
+      l.textContent = labels[v] || 'Boxed';
+    }
+    ['boxed', 'full', 'clean'].forEach(function(opt) {
+      var btn = document.getElementById('opt-' + opt);
+      if (btn) btn.classList.toggle('active', opt === v);
+    });
+  }
+  function setView(v) {
+    localStorage.setItem('aipo-view', v);
+    applyView(v);
+  }
+  function toggleView() {
+    var current = localStorage.getItem('aipo-view') || 'full';
+    var views = ['boxed', 'full', 'clean'];
+    var idx = views.indexOf(current);
+    var next = views[(idx + 1) % views.length];
+    setView(next);
+  }
+  applyView(localStorage.getItem('aipo-view') || 'full');
+</script>
+
+<!-- ── SIDEBAR ─────────────────────────────────────────── -->
+<aside class="site-sidebar">
+  <div class="sn-label">Navigation</div>
+  <a class="sn-item" href="index.html" data-page="index">
+    <span class="sn-num" style="background:#eef2f8;color:#1a2a5e;">⌂</span>
+    <div class="sn-text"><strong>Overview</strong><span>Introduction &amp; guide</span></div>
+  </a>
+  <div class="sn-label" style="margin-top:12px;">Foundation</div>
+  <a class="sn-item" href="prerequisites.html" data-page="prerequisites">
+    <span class="sn-num sn-p0">✦</span>
+    <div class="sn-text"><strong>Pre-Flight</strong><span>Prerequisites &amp; readiness</span></div>
+  </a>
+  <a class="sn-item" href="checklist.html" data-page="checklist">
+    <span class="sn-num sn-p1">✔</span>
+    <div class="sn-text"><strong>Foundation Check</strong><span>Domain readiness assessment</span></div>
+  </a>
+  <div class="sn-label" style="margin-top:12px;">Playbook Sections</div>
+  <a class="sn-item" href="framework.html" data-page="framework">
+    <span class="sn-num sn-c1">1</span>
+    <div class="sn-text"><strong>Framework</strong><span>AI+ org structure &amp; pillars</span></div>
+  </a>
+  <a class="sn-item" href="details.html" data-page="details">
+    <span class="sn-num sn-c2">2</span>
+    <div class="sn-text"><strong>Detailed Steps</strong><span>Step-by-step breakdown</span></div>
+  </a>
+  <a class="sn-item" href="workflow.html" data-page="workflow">
+    <span class="sn-num sn-c3">3</span>
+    <div class="sn-text"><strong>Workflow</strong><span>Transformation workflow</span></div>
+  </a>
+  <a class="sn-item" href="maturity.html" data-page="maturity">
+    <span class="sn-num sn-c4">4</span>
+    <div class="sn-text"><strong>Maturity Model</strong><span>Org maturity assessment</span></div>
+  </a>
+  <a class="sn-item" href="approaches.html" data-page="approaches">
+    <span class="sn-num sn-c5">5</span>
+    <div class="sn-text"><strong>Approaches</strong><span>Transformation strategies</span></div>
+  </a>
+  <div class="sn-label" style="margin-top:12px;">Reference</div>
+  <a class="sn-item" href="resources.html" data-page="resources">
+    <span class="sn-num" style="background:#e0f2fe;color:#0369a1;">R</span>
+    <div class="sn-text"><strong>Resources</strong><span>Framework downloads &amp; links</span></div>
+  </a>
+  <a class="sn-item" href="checklist_eval.html" data-page="checklist_eval">
+    <span class="sn-num" style="background:#fce7f3;color:#9d174d;">A</span>
+    <div class="sn-text"><strong>Readiness Assessment</strong><span>Detailed evaluation checklist</span></div>
+  </a>
+  <div class="sn-footer">Concept By:<br><a href="mailto:usman@uak.ca">Usman Abdul-Khaliq</a></div>
+</aside>
+
+<script>
+  // Set active nav item based on current page
+  (function() {
+    var pageName = window.location.pathname.split('/').pop().replace('.html', '');
+    var navLink = document.querySelector('[data-page="' + pageName + '"]');
+    if (navLink) {
+      document.querySelectorAll('.sn-item').forEach(function(el) {
+        el.classList.remove('active');
+      });
+      navLink.classList.add('active');
+    }
+  })();
+</script>
+
+</body>
+</html>

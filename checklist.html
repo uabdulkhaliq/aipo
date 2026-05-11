@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+ Organization – Foundation Readiness Check</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="checklist-page">
+
+<script src="layout-loader.js"></script>
+
+<div id="aipo-content">
+
+<!-- ── PAGE ───────────────────────────────────────────── -->
+<div class="page">
+
+  <!-- BANNER -->
+  <div class="banner">
+    <div class="banner-eyebrow">Foundation Layer · Self-Assessment</div>
+    <div class="banner-title">Foundation Readiness<br><em>Check Your Starting Point</em></div>
+    <div class="banner-desc">
+      Work through the 34 readiness items across all 7 prerequisite domains. Checked items are saved automatically. Use this to identify gaps before committing to an AI transformation programme — and to track progress as you close them.
+    </div>
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.2);font-size:0.76rem;">
+      <strong>📘 Related Guide:</strong> <a href="prerequisites.html" style="color:#fff;text-decoration:underline;">Pre-Flight Guide</a>
+    </div>
+    <!--
+    <div class="banner-tags">
+      <span class="btag">34 Items</span>
+      <span class="btag">7 Domains</span>
+      <span class="btag">Auto-Saved</span>
+      <span class="btag">Self-Assessment</span>
+    </div>
+    -->
+    </div>
+
+
+  <!-- READINESS CHECKLIST -->
+  <div class="sec-divider">
+    <div class="sec-divider-lbl" style="padding-left: 22px;">Self-Assessment</div>
+    <div class="sec-divider-title">Domain Readiness Checklist</div>
+    <div class="sec-divider-sep"></div>
+    <div id="cl-lbl" class="sec-divider-count">0 / 34</div>
+  </div>
+
+  <div class="cl-wrap">
+    <div class="cl-bar-wrap"><div class="cl-bar" id="cl-bar"></div></div>
+
+    <!-- Domain 1 -->
+    <div class="cl-section cl-d1">
+      <div class="cl-section-header">
+        <div class="cl-s-num">01</div>
+        <div class="cl-s-name">Process Maturity</div>
+        <div class="cl-s-sub">Documented &amp; measurable workflows</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-1-1"><span>Key processes documented with step-by-step SOPs and decision points</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-1-2"><span>Process owners assigned for all major workflows</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-1-3"><span>Performance baselines established (cycle time, error rate, cost)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-1-4"><span>Exception paths and edge cases mapped — not just the happy path</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 2 -->
+    <div class="cl-section cl-d2">
+      <div class="cl-section-header">
+        <div class="cl-s-num">02</div>
+        <div class="cl-s-name">Data Foundation</div>
+        <div class="cl-s-sub">Inventoried, classified &amp; quality-assured</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-2-1"><span>Data catalogue / inventory completed — all major datasets listed</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-2-2"><span>Data classification scheme defined and applied (Public / Internal / Confidential / Restricted)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-2-3"><span>Data quality standards defined per dataset (completeness, accuracy, timeliness)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-2-4"><span>Data lineage documented for critical datasets</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-2-5"><span>Data ownership register maintained — every dataset has a named owner</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 3 -->
+    <div class="cl-section cl-d3">
+      <div class="cl-section-header">
+        <div class="cl-s-num">03</div>
+        <div class="cl-s-name">Information Security</div>
+        <div class="cl-s-sub">Policies, controls &amp; access governance</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-3-1"><span>Information security policy documented, approved, and communicated</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-3-2"><span>IAM / RBAC enforced with least-privilege applied to AI service accounts</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-3-3"><span>Secrets management solution in use — no hardcoded API keys or credentials</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-3-4"><span>Secure development practices applied to AI training pipelines and APIs</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-3-5"><span>Incident response plan documented and tested for AI-related security events</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 4 -->
+    <div class="cl-section cl-d4">
+      <div class="cl-section-header">
+        <div class="cl-s-num">04</div>
+        <div class="cl-s-name">Privacy &amp; Compliance</div>
+        <div class="cl-s-sub">PII mapping &amp; regulatory coverage</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-4-1"><span>All PII identified, mapped to purpose, and given a legal basis for processing</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-4-2"><span>Applicable regulations documented and monitored (GDPR, CCPA, HIPAA, etc.)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-4-3"><span>Privacy by design applied — data minimization and purpose limitation by default</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-4-4"><span>Legal review process in place for new AI use cases before deployment</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-4-5"><span>Data retention and deletion policies defined, including right-to-erasure for model training data</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 5 -->
+    <div class="cl-section cl-d5">
+      <div class="cl-section-header">
+        <div class="cl-s-num">05</div>
+        <div class="cl-s-name">Technology Baseline</div>
+        <div class="cl-s-sub">Cloud readiness, APIs &amp; platform standards</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-5-1"><span>Cloud platform standardized and AI/ML services available and approved</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-5-2"><span>API catalogue and standards defined — versioned, documented, and consistent</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-5-3"><span>Identity / SSO platform integrated — AI systems can authenticate via it</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-5-4"><span>Observability standards in place (logging, monitoring, alerting) for AI services</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-5-5"><span>CI/CD pipeline with security scanning, test gates, and approval workflows</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 6 -->
+    <div class="cl-section cl-d6">
+      <div class="cl-section-header">
+        <div class="cl-s-num">06</div>
+        <div class="cl-s-name">People &amp; Change</div>
+        <div class="cl-s-sub">AI literacy, buy-in &amp; change capability</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-6-1"><span>AI literacy baseline in place for all employees</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-6-2"><span>Named executive sponsors who visibly champion the AI transformation</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-6-3"><span>Change management capability in place (internal team or partner)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-6-4"><span>Reskilling pathways defined for roles most affected by AI</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-6-5"><span>Employee feedback channels established for AI concerns and improvement ideas</span></label>
+      </div>
+    </div>
+
+    <!-- Domain 7 -->
+    <div class="cl-section cl-d7">
+      <div class="cl-section-header">
+        <div class="cl-s-num">07</div>
+        <div class="cl-s-name">Ethics &amp; Principles</div>
+        <div class="cl-s-sub">Values, accountability &amp; responsible use</div>
+      </div>
+      <div class="cl-items">
+        <label class="cl-item"><input type="checkbox" data-key="p-7-1"><span>AI principles formally adopted and communicated (fairness, transparency, accountability)</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-7-2"><span>Named AI ethics owner or review committee in place</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-7-3"><span>Bias assessment process for testing models before deployment</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-7-4"><span>Explainability standards defined for AI decisions affecting individuals</span></label>
+        <label class="cl-item"><input type="checkbox" data-key="p-7-5"><span>Override and appeal paths accessible and documented for AI outputs</span></label>
+      </div>
+    </div>
+
+  </div><!-- /.cl-wrap -->
+
+</div><!-- /.page -->
+
+<script>
+  /* ── CHECKLIST SAVE / LOAD ───────────────────────────── */
+  (function() {
+    var STORE = 'aipo-prereq-cl';
+    function save(data) { sessionStorage.setItem(STORE, JSON.stringify(data)); }
+    function load() { try { return JSON.parse(sessionStorage.getItem(STORE) || '{}'); } catch(e) { return {}; } }
+
+    function updateUI() {
+      var all = document.querySelectorAll('.cl-item input[type=checkbox]');
+      var checked = 0;
+      all.forEach(function(cb) {
+        cb.closest('.cl-item').classList.toggle('cl-done', cb.checked);
+        if (cb.checked) checked++;
+      });
+      var pct = all.length ? (checked / all.length * 100) : 0;
+      var bar = document.getElementById('cl-bar');
+      if (bar) bar.style.width = pct.toFixed(1) + '%';
+      var lbl = document.getElementById('cl-lbl');
+      if (lbl) lbl.textContent = checked + ' / ' + all.length;
+    }
+
+    function bootChecklistCl() {
+      var bar = document.getElementById('cl-bar');
+      if (!bar || bar.dataset.aipoWired === '1') return;
+      bar.dataset.aipoWired = '1';
+      var saved = load();
+      document.querySelectorAll('.cl-item input[type=checkbox]').forEach(function(cb) {
+        if (saved[cb.dataset.key]) cb.checked = true;
+        cb.addEventListener('change', function() {
+          var d = load(); d[cb.dataset.key] = cb.checked; save(d); updateUI();
+        });
+      });
+      updateUI();
+    }
+    document.addEventListener('DOMContentLoaded', bootChecklistCl);
+    document.addEventListener('aipo:content-loaded', bootChecklistCl);
+  })();
+
+  /* ── EVIDENCE PANEL ──────────────────────────────────── */
+  (function() {
+    var EV_KEY = 'aipo-prereq-ev';
+    function evLoad() { try { return JSON.parse(sessionStorage.getItem(EV_KEY) || '{}'); } catch(e) { return {}; } }
+    function evSave(d) { sessionStorage.setItem(EV_KEY, JSON.stringify(d)); }
+
+    var curKey = null, overlay, panel, entriesWrap;
+
+    var TYPES = [
+      'Policy Document','Procedure / SOP','Data Governance Policy',
+      'GDPR Compliance Document','Security Policy','Privacy Notice',
+      'Training Record','Audit Report','Contract / Agreement',
+      'Technical Specification','Project Plan','Register / Inventory',
+      'Framework Document','Risk Assessment','Meeting Minutes','Other'
+    ];
+    var typeOptsHtml = '<option value="">— Select type —</option>' +
+      TYPES.map(function(t){ return '<option value="'+t+'">'+t+'</option>'; }).join('');
+
+    function init() {
+      document.querySelectorAll('.ep-overlay, .ep-panel').forEach(function (el) {
+        el.remove();
+      });
+      overlay = document.createElement('div');
+      overlay.className = 'ep-overlay';
+      overlay.addEventListener('click', closePanel);
+
+      panel = document.createElement('div');
+      panel.className = 'ep-panel';
+      panel.innerHTML =
+        '<div class="ep-head">' +
+          '<div class="ep-head-inner">' +
+            '<div class="ep-eyebrow">Evidence &amp; Documentation</div>' +
+            '<div class="ep-htitle" id="ep-htitle"></div>' +
+          '</div>' +
+          '<button class="ep-hclose" id="ep-hclose">&#x2715;</button>' +
+        '</div>' +
+        '<div class="ep-body">' +
+          '<div class="ep-entries" id="ep-entries"></div>' +
+          '<button class="ep-add" id="ep-add">+ Add Evidence Entry</button>' +
+        '</div>' +
+        '<div class="ep-foot">Entries are saved in your browser session. Use the Location field to reference files in SharePoint, a shared drive, or any URL.</div>';
+
+      document.body.appendChild(overlay);
+      document.body.appendChild(panel);
+
+      entriesWrap = document.getElementById('ep-entries');
+      document.getElementById('ep-hclose').addEventListener('click', closePanel);
+      document.getElementById('ep-add').addEventListener('click', addEntry);
+
+      injectButtons();
+    }
+
+    function openPanel(key, title) {
+      curKey = key;
+      document.getElementById('ep-htitle').textContent = title;
+      render();
+      overlay.classList.add('ep-open');
+      panel.classList.add('ep-open');
+    }
+
+    function closePanel() {
+      overlay.classList.remove('ep-open');
+      panel.classList.remove('ep-open');
+      curKey = null;
+    }
+
+    function render() {
+      var data = evLoad(), list = data[curKey] || [];
+      entriesWrap.innerHTML = '';
+      if (!list.length) {
+        entriesWrap.innerHTML =
+          '<div class="ep-empty">' +
+            '<div class="ep-empty-icon">📋</div>' +
+            '<div class="ep-empty-title">No evidence linked yet</div>' +
+            '<div class="ep-empty-sub">Add files, documents and records that<br>demonstrate this item is complete.</div>' +
+          '</div>';
+        return;
+      }
+      list.forEach(function(e, i) { entriesWrap.appendChild(buildCard(e, i)); });
+    }
+
+    function buildCard(entry, i) {
+      var d = document.createElement('div');
+      d.className = 'ep-card';
+      d.innerHTML =
+        '<div class="ep-card-head">' +
+          '<span class="ep-card-lbl">Entry ' + (i+1) + '</span>' +
+          '<button class="ep-card-del" data-i="'+i+'">Remove</button>' +
+        '</div>' +
+        '<div class="ep-card-fields">' +
+          '<div class="epf"><label>File / Document Name</label>' +
+            '<input type="text" data-f="name" data-i="'+i+'" value="'+esc(entry.name||'')+'" placeholder="e.g. GDPR Policy v2.1.pdf"></div>' +
+          '<div class="epf"><label>File Type</label>' +
+            '<select data-f="fileType" data-i="'+i+'">'+typeOptsHtml+'</select></div>' +
+          '<div class="epf epf-full"><label>Location / Path / URL</label>' +
+            '<input type="text" data-f="location" data-i="'+i+'" value="'+esc(entry.location||'')+'" placeholder="e.g. SharePoint › Legal › Compliance, or https://…"></div>' +
+          '<div class="epf"><label>Ownership</label>' +
+            '<input type="text" data-f="ownership" data-i="'+i+'" value="'+esc(entry.ownership||'')+'" placeholder="Name or team"></div>' +
+          '<div class="epf"><label>Last Updated</label>' +
+            '<input type="date" data-f="lastUpdated" data-i="'+i+'" value="'+esc(entry.lastUpdated||'')+'"></div>' +
+          '<div class="epf epf-full"><label>Notes</label>' +
+            '<textarea data-f="notes" data-i="'+i+'" placeholder="Context, version info, caveats, links…">'+esc(entry.notes||'')+'</textarea></div>' +
+        '</div>';
+      d.querySelector('select[data-f="fileType"]').value = entry.fileType || '';
+      d.querySelector('.ep-card-del').addEventListener('click', function(e) {
+        var idx = parseInt(e.target.dataset.i);
+        var data = evLoad();
+        if (data[curKey]) { data[curKey].splice(idx,1); if (!data[curKey].length) delete data[curKey]; evSave(data); }
+        render(); refreshBadge(curKey);
+      });
+      d.querySelectorAll('input,select,textarea').forEach(function(el) {
+        el.addEventListener('input', onFieldChange);
+        el.addEventListener('change', onFieldChange);
+      });
+      return d;
+    }
+
+    function onFieldChange(e) {
+      var i = parseInt(e.target.dataset.i), f = e.target.dataset.f;
+      var data = evLoad();
+      if (!data[curKey]) data[curKey] = [];
+      if (!data[curKey][i]) data[curKey][i] = {};
+      data[curKey][i][f] = e.target.value;
+      evSave(data); refreshBadge(curKey);
+    }
+
+    function addEntry() {
+      var data = evLoad();
+      if (!data[curKey]) data[curKey] = [];
+      data[curKey].push({name:'',fileType:'',location:'',ownership:'',lastUpdated:'',notes:''});
+      evSave(data); render(); refreshBadge(curKey);
+      setTimeout(function(){ panel.querySelector('.ep-body').scrollTop = 99999; }, 60);
+    }
+
+    function refreshBadge(key) {
+      var data = evLoad(), n = (data[key]||[]).length;
+      var btn = document.querySelector('.ev-trigger[data-evkey="'+key+'"]');
+      if (!btn) return;
+      btn.classList.toggle('has-ev', n > 0);
+      btn.querySelector('.ev-ct').textContent = n > 0 ? n : '';
+    }
+
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+    }
+
+    function makeBtn(key, title) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ev-trigger';
+      btn.dataset.evkey = key;
+      btn.title = 'Add or view evidence for this item';
+      btn.innerHTML =
+        '<svg width="10" height="12" viewBox="0 0 10 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round">' +
+          '<path d="M6 1H2a1 1 0 00-1 1v8a1 1 0 001 1h6a1 1 0 001-1V4L6 1z"/>' +
+          '<path d="M6 1v3h3"/>' +
+        '</svg>' +
+        '<span class="ev-ct"></span>';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        openPanel(key, title);
+      });
+      return btn;
+    }
+
+    function injectButtons() {
+      document.querySelectorAll('.cl-item input[type="checkbox"][data-key]').forEach(function(cb) {
+        var key = cb.dataset.key;
+        var span = cb.parentElement.querySelector('span');
+        var title = span ? span.textContent.trim() : key;
+        cb.parentElement.appendChild(makeBtn(key, title));
+        refreshBadge(key);
+      });
+    }
+
+    function bootEvidenceCl() {
+      if (!document.querySelector('.cl-item input[type="checkbox"][data-key]')) return;
+      init();
+    }
+    document.addEventListener('DOMContentLoaded', bootEvidenceCl);
+    document.addEventListener('aipo:content-loaded', bootEvidenceCl);
+  })();
+</script>
+
+</div>
+<script src="spa-nav.js"></script>
+
+</body>
+</html>

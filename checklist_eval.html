@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI+ Organization – Assessment Checklist</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="main.css">
+</head>
+<body class="assessment-page">
+
+<script src="layout-loader.js"></script>
+
+<div id="aipo-content">
+
+<!-- ── PAGE ───────────────────────────────────────────── -->
+<div class="page">
+<div class="page-main">
+
+  <!-- PROGRESS BAR -->
+  <div class="prog-wrap">
+    <div class="prog-lead">
+      <div class="prog-title">AI+ Readiness Assessment</div>
+      <p class="prog-hint"><span class="prog-hint-icon" aria-hidden="true">📘</span> Use this checklist to track readiness progress across all sections</p>
+    </div>
+    <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+    <div class="prog-pct" id="progPct">0%</div>
+    <div class="prog-lbl" id="progLbl">0 / 0 items</div>
+    <div class="prog-acts">
+      <span class="save-ind" id="saveInd">✓ Saved</span>
+      <button class="btn" onclick="printPage()">Print / Export</button>
+      <button class="btn btn-danger" onclick="resetAll()">Reset</button>
+    </div>
+  </div>
+
+  <!-- ORG INFO -->
+  <div class="org-card">
+    <div>
+      <label class="f-lbl" for="org-name">Organization Name</label>
+      <input class="f-inp" id="org-name" type="text" placeholder="e.g. Acme Corporation">
+    </div>
+    <div>
+      <label class="f-lbl" for="org-date">Assessment Date</label>
+      <input class="f-inp" id="org-date" type="date">
+    </div>
+    <div>
+      <label class="f-lbl" for="org-owner">Facilitator / Owner</label>
+      <input class="f-inp" id="org-owner" type="text" placeholder="Name">
+    </div>
+    <div>
+      <label class="f-lbl" for="org-stage">Current AI Stage</label>
+      <select class="f-inp" id="org-stage">
+        <option value="">Select…</option>
+        <option>Just Starting</option>
+        <option>Exploring</option>
+        <option>Piloting</option>
+        <option>Scaling</option>
+        <option>Advanced</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 1 — VALUE (WHY)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s1">
+    <div class="sc-head">
+      <div class="sc-num">1</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">VALUE (WHY)</div>
+        <div class="sc-head-sub">Define the core outcomes your organization wants to achieve with AI.</div>
+      </div>
+      <div class="sc-badge">0 / 8</div>
+    </div>
+
+    <div class="sub-hd">Value Dimensions — Which matter most to your organization?</div>
+
+    <div class="clblock" style="background:white;">
+      <div class="ci">
+        <input type="checkbox" id="s1-dim-eff">
+        <label for="s1-dim-eff"><strong>Efficiency</strong> — Do things faster and at lower cost. Reduce time, manual effort and operational spend.</label>
+      </div>
+      <div class="ci">
+        <input type="checkbox" id="s1-dim-qual">
+        <label for="s1-dim-qual"><strong>Quality</strong> — Do things better with fewer errors. Improve accuracy, consistency and reliability.</label>
+      </div>
+      <div class="ci">
+        <input type="checkbox" id="s1-dim-cap">
+        <label for="s1-dim-cap"><strong>Capability</strong> — Enable new outcomes and possibilities. Create new products, services and business models.</label>
+      </div>
+    </div>
+
+    <div class="sub-hd">Define Your AI Value</div>
+
+    <div class="qblock">
+      <div class="q-lbl">What is your organization's AI North Star — the single most important outcome AI must deliver?</div>
+      <div class="q-hint">Keep it to one clear sentence that leadership and teams can rally around.</div>
+      <textarea class="q-ta" id="s1-north-star" placeholder="e.g. Cut customer response time by 60% using AI-assisted support agents by Q4 2026."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">What are your top 3 business priorities AI should support?</div>
+      <textarea class="q-ta" id="s1-priorities" placeholder="1.&#10;2.&#10;3."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">How will you measure AI success? List your key success metrics.</div>
+      <div class="q-hint">Think in terms of before/after measurements tied to your value dimensions above.</div>
+      <textarea class="q-ta" id="s1-metrics" placeholder="e.g. Time saved per task, error rate reduction, cost per transaction, new revenue enabled…"></textarea>
+    </div>
+
+    <div class="sub-hd">Readiness Checklist</div>
+    <div class="clblock">
+      <div class="cl-title">Check each item your organization has completed</div>
+      <div class="ci"><input type="checkbox" id="s1-r1"><label for="s1-r1">Leadership is aligned on AI value priorities and outcomes.</label></div>
+      <div class="ci"><input type="checkbox" id="s1-r2"><label for="s1-r2">AI success metrics have been defined and baselined.</label></div>
+      <div class="ci"><input type="checkbox" id="s1-r3"><label for="s1-r3">North Star goals are documented and shared across the organization.</label></div>
+      <div class="ci"><input type="checkbox" id="s1-r4"><label for="s1-r4">AI investments are explicitly tied to business strategy.</label></div>
+      <div class="ci"><input type="checkbox" id="s1-r5"><label for="s1-r5">Finance and planning teams are involved in defining AI value.</label></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 2 — USE CASES (WHERE)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s2">
+    <div class="sc-head">
+      <div class="sc-num">2</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">USE CASES (WHERE)</div>
+        <div class="sc-head-sub">Standardized ways AI is applied across the organization.</div>
+      </div>
+      <div class="sc-badge">0 / 10</div>
+    </div>
+
+    <div class="sub-hd">Use Case Types — Select applicable types and describe your examples</div>
+
+    <div class="qblock" style="background:white;">
+      <div class="exp-item">
+        <div class="exp-head">
+          <input type="checkbox" id="s2-uc-auto">
+          <span class="exp-name">Automation</span>
+          <span class="exp-desc">AI replaces repetitive, rule-based tasks end-to-end.</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-lbl">Our automation use cases / examples</div>
+          <textarea id="s2-uc-auto-notes" placeholder="e.g. Invoice processing, employee onboarding forms, data entry validation…"></textarea>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <input type="checkbox" id="s2-uc-aug">
+          <span class="exp-name">Augmentation</span>
+          <span class="exp-desc">AI assists humans to be more productive and effective.</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-lbl">Our augmentation use cases / examples</div>
+          <textarea id="s2-uc-aug-notes" placeholder="e.g. AI-assisted drafting, intelligent search, recommendation engines for sales reps…"></textarea>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <input type="checkbox" id="s2-uc-gen">
+          <span class="exp-name">Generation</span>
+          <span class="exp-desc">AI creates new content, code, designs, or ideas.</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-lbl">Our generation use cases / examples</div>
+          <textarea id="s2-uc-gen-notes" placeholder="e.g. Marketing copy, code generation, product descriptions, presentations…"></textarea>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <input type="checkbox" id="s2-uc-pred">
+          <span class="exp-name">Prediction</span>
+          <span class="exp-desc">AI forecasts outcomes, trends or behaviors.</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-lbl">Our prediction use cases / examples</div>
+          <textarea id="s2-uc-pred-notes" placeholder="e.g. Demand forecasting, churn prediction, maintenance alerts, risk scoring…"></textarea>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-head">
+          <input type="checkbox" id="s2-uc-opt">
+          <span class="exp-name">Optimization</span>
+          <span class="exp-desc">AI recommends the best actions or allocation of resources.</span>
+        </div>
+        <div class="exp-body">
+          <div class="exp-body-lbl">Our optimization use cases / examples</div>
+          <textarea id="s2-uc-opt-notes" placeholder="e.g. Pricing optimization, resource scheduling, route planning, campaign targeting…"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-hd">Prioritization</div>
+    <div class="qblock">
+      <div class="q-lbl">What are your top 3–5 prioritized AI use cases right now?</div>
+      <div class="q-hint">List them by name and the business area they belong to.</div>
+      <textarea class="q-ta" id="s2-top-uc" placeholder="1.&#10;2.&#10;3.&#10;4.&#10;5."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">What criteria are you using to prioritize use cases?</div>
+      <div class="q-hint">e.g. Impact vs. effort matrix, feasibility score, strategic alignment, risk level…</div>
+      <textarea class="q-ta" id="s2-criteria" placeholder="Describe your prioritization approach…"></textarea>
+    </div>
+
+    <div class="sub-hd">Readiness Checklist</div>
+    <div class="clblock">
+      <div class="cl-title">Check each item your organization has completed</div>
+      <div class="ci"><input type="checkbox" id="s2-r1"><label for="s2-r1">A use case inventory has been created (list of all AI opportunities identified).</label></div>
+      <div class="ci"><input type="checkbox" id="s2-r2"><label for="s2-r2">Use cases have been scored and ranked by impact, effort, and risk.</label></div>
+      <div class="ci"><input type="checkbox" id="s2-r3"><label for="s2-r3">Top 3–10 use cases have been selected and agreed on by leadership.</label></div>
+      <div class="ci"><input type="checkbox" id="s2-r4"><label for="s2-r4">Business owners are assigned to each prioritized use case.</label></div>
+      <div class="ci"><input type="checkbox" id="s2-r5"><label for="s2-r5">A repeatable process exists for identifying and evaluating new use cases.</label></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 3 — OPERATING MODEL (HOW)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s3">
+    <div class="sc-head">
+      <div class="sc-num">3</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">OPERATING MODEL (HOW)</div>
+        <div class="sc-head-sub">Define how humans and AI work together in real workflows.</div>
+      </div>
+      <div class="sc-badge">0 / 5</div>
+    </div>
+
+    <div class="sub-hd">Operating Mode — Select the model for each process area</div>
+
+    <div class="qblock" style="padding:0; overflow:auto;">
+      <table class="om-table">
+        <thead>
+          <tr>
+            <th>Process Area</th>
+            <th>Assistive<br><span style="font-weight:400;text-transform:none;letter-spacing:0">Human in Control</span></th>
+            <th>Co-Pilot<br><span style="font-weight:400;text-transform:none;letter-spacing:0">AI + Human Collab</span></th>
+            <th>Autonomous<br><span style="font-weight:400;text-transform:none;letter-spacing:0">AI in Control</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Customer-facing processes</td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-as"><input type="radio" name="om-cust" id="om-cust-as"><label for="om-cust-as">Assistive</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-cp"><input type="radio" name="om-cust" id="om-cust-cp"><label for="om-cust-cp">Co-Pilot</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-au"><input type="radio" name="om-cust" id="om-cust-au"><label for="om-cust-au">Autonomous</label></div></div></td>
+          </tr>
+          <tr>
+            <td>Internal operations</td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-as"><input type="radio" name="om-ops" id="om-ops-as"><label for="om-ops-as">Assistive</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-cp"><input type="radio" name="om-ops" id="om-ops-cp"><label for="om-ops-cp">Co-Pilot</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-au"><input type="radio" name="om-ops" id="om-ops-au"><label for="om-ops-au">Autonomous</label></div></div></td>
+          </tr>
+          <tr>
+            <td>Decision-making processes</td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-as"><input type="radio" name="om-dec" id="om-dec-as"><label for="om-dec-as">Assistive</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-cp"><input type="radio" name="om-dec" id="om-dec-cp"><label for="om-dec-cp">Co-Pilot</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-au"><input type="radio" name="om-dec" id="om-dec-au"><label for="om-dec-au">Autonomous</label></div></div></td>
+          </tr>
+          <tr>
+            <td>Data &amp; analytics</td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-as"><input type="radio" name="om-data" id="om-data-as"><label for="om-data-as">Assistive</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-cp"><input type="radio" name="om-data" id="om-data-cp"><label for="om-data-cp">Co-Pilot</label></div></div></td>
+            <td><div class="rg" style="justify-content:center;"><div class="ro om-au"><input type="radio" name="om-data" id="om-data-au"><label for="om-data-au">Autonomous</label></div></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="sub-hd">Workflow Design</div>
+    <div class="qblock">
+      <div class="q-lbl">Which workflows have been — or need to be — redesigned to incorporate AI?</div>
+      <div class="q-hint">Describe what is being eliminated, automated, and what remains human-led.</div>
+      <textarea class="q-ta" id="s3-workflows" placeholder="e.g. Customer support triage: AI handles initial classification and response drafts, human agent reviews and sends…"></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">How will decision ownership and accountability be documented for AI-assisted processes?</div>
+      <textarea class="q-ta" id="s3-decisions" placeholder="e.g. Decision matrix per use case, RACI for AI-involved decisions, escalation rules…"></textarea>
+    </div>
+
+    <div class="sub-hd">Readiness Checklist</div>
+    <div class="clblock">
+      <div class="cl-title">Check each item your organization has completed</div>
+      <div class="ci"><input type="checkbox" id="s3-r1"><label for="s3-r1">Future-state workflows have been mapped and redesigned to incorporate AI.</label></div>
+      <div class="ci"><input type="checkbox" id="s3-r2"><label for="s3-r2">Human-AI handoff points are clearly defined in each workflow.</label></div>
+      <div class="ci"><input type="checkbox" id="s3-r3"><label for="s3-r3">Decision ownership is documented for each AI-driven process.</label></div>
+      <div class="ci"><input type="checkbox" id="s3-r4"><label for="s3-r4">Exception handling and escalation paths are defined.</label></div>
+      <div class="ci"><input type="checkbox" id="s3-r5"><label for="s3-r5">End users have been involved in operating model design.</label></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 4 — FOUNDATION (WHAT ENABLES IT)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s4">
+    <div class="sc-head">
+      <div class="sc-num">4</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">FOUNDATION (WHAT ENABLES IT)</div>
+        <div class="sc-head-sub">The essential data, tools and technology that make AI possible.</div>
+      </div>
+      <div class="sc-badge">0 / 5</div>
+    </div>
+
+    <div class="sub-hd">Foundation Readiness — Rate each area and add notes</div>
+
+    <div class="fr-rows">
+      <div class="fr-row">
+        <div class="fr-name">Data Quality &amp; Accessibility</div>
+        <div class="rg">
+          <div class="ro r-no"><input type="radio" name="fr-data" id="fr-data-no"><label for="fr-data-no">Not Ready</label></div>
+          <div class="ro r-ip"><input type="radio" name="fr-data" id="fr-data-ip"><label for="fr-data-ip">In Progress</label></div>
+          <div class="ro r-ok"><input type="radio" name="fr-data" id="fr-data-ok"><label for="fr-data-ok">Ready</label></div>
+        </div>
+        <textarea class="fr-notes" id="fr-data-notes" placeholder="Notes on data quality gaps or actions…"></textarea>
+      </div>
+      <div class="fr-row">
+        <div class="fr-name">Data Governance &amp; Permissions</div>
+        <div class="rg">
+          <div class="ro r-no"><input type="radio" name="fr-gov" id="fr-gov-no"><label for="fr-gov-no">Not Ready</label></div>
+          <div class="ro r-ip"><input type="radio" name="fr-gov" id="fr-gov-ip"><label for="fr-gov-ip">In Progress</label></div>
+          <div class="ro r-ok"><input type="radio" name="fr-gov" id="fr-gov-ok"><label for="fr-gov-ok">Ready</label></div>
+        </div>
+        <textarea class="fr-notes" id="fr-gov-notes" placeholder="Notes on governance policies and data ownership…"></textarea>
+      </div>
+      <div class="fr-row">
+        <div class="fr-name">AI / ML Tools &amp; Models</div>
+        <div class="rg">
+          <div class="ro r-no"><input type="radio" name="fr-tools" id="fr-tools-no"><label for="fr-tools-no">Not Ready</label></div>
+          <div class="ro r-ip"><input type="radio" name="fr-tools" id="fr-tools-ip"><label for="fr-tools-ip">In Progress</label></div>
+          <div class="ro r-ok"><input type="radio" name="fr-tools" id="fr-tools-ok"><label for="fr-tools-ok">Ready</label></div>
+        </div>
+        <textarea class="fr-notes" id="fr-tools-notes" placeholder="Notes on tooling selection or gaps…"></textarea>
+      </div>
+      <div class="fr-row">
+        <div class="fr-name">Platform &amp; Infrastructure</div>
+        <div class="rg">
+          <div class="ro r-no"><input type="radio" name="fr-infra" id="fr-infra-no"><label for="fr-infra-no">Not Ready</label></div>
+          <div class="ro r-ip"><input type="radio" name="fr-infra" id="fr-infra-ip"><label for="fr-infra-ip">In Progress</label></div>
+          <div class="ro r-ok"><input type="radio" name="fr-infra" id="fr-infra-ok"><label for="fr-infra-ok">Ready</label></div>
+        </div>
+        <textarea class="fr-notes" id="fr-infra-notes" placeholder="Notes on compute, cloud platform or infrastructure needs…"></textarea>
+      </div>
+      <div class="fr-row">
+        <div class="fr-name">API &amp; System Integration</div>
+        <div class="rg">
+          <div class="ro r-no"><input type="radio" name="fr-api" id="fr-api-no"><label for="fr-api-no">Not Ready</label></div>
+          <div class="ro r-ip"><input type="radio" name="fr-api" id="fr-api-ip"><label for="fr-api-ip">In Progress</label></div>
+          <div class="ro r-ok"><input type="radio" name="fr-api" id="fr-api-ok"><label for="fr-api-ok">Ready</label></div>
+        </div>
+        <textarea class="fr-notes" id="fr-api-notes" placeholder="Notes on integration readiness and system connectivity…"></textarea>
+      </div>
+    </div>
+
+    <div class="sub-hd">Foundation Analysis</div>
+    <div class="qblock">
+      <div class="q-lbl">What are the biggest data gaps or quality issues your organization needs to address first?</div>
+      <textarea class="q-ta" id="s4-data-gaps" placeholder="e.g. Customer data is siloed across 3 systems with no unified ID, historical data not labelled…"></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">Which AI tools, platforms, or models are being evaluated or have been selected?</div>
+      <textarea class="q-ta" id="s4-tools-sel" placeholder="e.g. Azure OpenAI for LLMs, Databricks for data pipelines, existing RPA tools for automation…"></textarea>
+    </div>
+
+    <div class="sub-hd">Readiness Checklist</div>
+    <div class="clblock">
+      <div class="cl-title">Check each item your organization has completed</div>
+      <div class="ci"><input type="checkbox" id="s4-r1"><label for="s4-r1">Data sources for priority use cases have been identified and quality assessed.</label></div>
+      <div class="ci"><input type="checkbox" id="s4-r2"><label for="s4-r2">Data governance policies and access permissions are in place.</label></div>
+      <div class="ci"><input type="checkbox" id="s4-r3"><label for="s4-r3">AI tools and models have been shortlisted or selected for priority use cases.</label></div>
+      <div class="ci"><input type="checkbox" id="s4-r4"><label for="s4-r4">Integration requirements have been mapped (APIs, systems, data flows).</label></div>
+      <div class="ci"><input type="checkbox" id="s4-r5"><label for="s4-r5">A minimal viable foundation has been defined to start — avoiding over-engineering.</label></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 5 — GOVERNANCE (CONTROL & TRUST)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s5">
+    <div class="sc-head">
+      <div class="sc-num">5</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">GOVERNANCE (CONTROL &amp; TRUST)</div>
+        <div class="sc-head-sub">Ensures responsible, ethical and compliant use of AI across the organization.</div>
+      </div>
+      <div class="sc-badge">0 / 12</div>
+    </div>
+
+    <div class="gov-group">
+      <div class="gov-group-title">Privacy &amp; Security</div>
+      <div class="ci"><input type="checkbox" id="s5-ps1"><label for="s5-ps1">AI-specific data privacy policies have been defined and communicated.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-ps2"><label for="s5-ps2">Access controls for AI systems and training data are in place.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-ps3"><label for="s5-ps3">A security review process exists for AI systems before deployment.</label></div>
+    </div>
+
+    <div class="gov-group">
+      <div class="gov-group-title">Risk — Bias &amp; Accuracy</div>
+      <div class="ci"><input type="checkbox" id="s5-rb1"><label for="s5-rb1">A bias assessment process is defined for AI models and outputs.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-rb2"><label for="s5-rb2">Accuracy and performance thresholds are established per use case.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-rb3"><label for="s5-rb3">An AI-specific risk register exists and is actively maintained.</label></div>
+    </div>
+
+    <div class="gov-group">
+      <div class="gov-group-title">Compliance</div>
+      <div class="ci"><input type="checkbox" id="s5-co1"><label for="s5-co1">Regulatory and legal requirements for AI have been identified and mapped.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-co2"><label for="s5-co2">A legal review process for AI deployments is in place.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-co3"><label for="s5-co3">An AI usage policy is documented, approved, and communicated to all staff.</label></div>
+    </div>
+
+    <div class="gov-group">
+      <div class="gov-group-title">Auditability &amp; Control</div>
+      <div class="ci"><input type="checkbox" id="s5-au1"><label for="s5-au1">Audit logging is enabled for AI-driven decisions and outputs.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-au2"><label for="s5-au2">A human override or review mechanism exists for autonomous AI processes.</label></div>
+      <div class="ci"><input type="checkbox" id="s5-au3"><label for="s5-au3">AI monitoring, alerting, and performance tracking is operational.</label></div>
+    </div>
+
+    <div class="sub-hd">Governance Context</div>
+    <div class="qblock">
+      <div class="q-lbl">What are the top governance concerns or risks for your organization regarding AI?</div>
+      <textarea class="q-ta" id="s5-concerns" placeholder="e.g. Data privacy with customer PII, regulatory compliance in financial decisions, reputational risk from AI errors…"></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">Who owns AI governance and risk management in your organization?</div>
+      <div class="q-hint">List role and name (if assigned).</div>
+      <textarea class="q-ta" id="s5-owner" placeholder="e.g. Chief Risk Officer (Jane Smith), AI Ethics Committee, Head of Legal &amp; Compliance…"></textarea>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 6 — EXECUTION (HOW IT HAPPENS)
+  ════════════════════════════════════════════════════ -->
+  <div class="sc s6">
+    <div class="sc-head">
+      <div class="sc-num">6</div>
+      <div class="sc-head-text">
+        <div class="sc-head-title">EXECUTION (HOW IT HAPPENS)</div>
+        <div class="sc-head-sub">How the organization delivers AI transformation and realizes value.</div>
+      </div>
+      <div class="sc-badge">0 / 10</div>
+    </div>
+
+    <div class="sub-hd">Transformation Approach — Select your primary delivery model</div>
+    <div class="qblock">
+      <div class="rg">
+        <div class="ro a-fw"><input type="radio" name="s6-approach" id="s6-fw"><label for="s6-fw">Framework-driven — Structured, repeatable, scale-focused</label></div>
+        <div class="ro a-hi"><input type="radio" name="s6-approach" id="s6-hi"><label for="s6-hi">Hierarchical (Top-down) — Leadership-led, aligned, controlled</label></div>
+        <div class="ro a-pr"><input type="radio" name="s6-approach" id="s6-pr"><label for="s6-pr">Pragmatic (Bottom-up) — Fast, innovation-led, experimental</label></div>
+      </div>
+    </div>
+
+    <div class="sub-hd">Roles — Check roles that are defined and assigned</div>
+    <div class="clblock" style="background:white;">
+      <div class="ci">
+        <input type="checkbox" id="s6-role-exp">
+        <label for="s6-role-exp"><strong>Explorer</strong> — Discovers and identifies AI opportunities across the organization.</label>
+      </div>
+      <div class="ci">
+        <input type="checkbox" id="s6-role-op">
+        <label for="s6-role-op"><strong>Operator</strong> — Executes and runs AI-enabled workflows day-to-day.</label>
+      </div>
+      <div class="ci">
+        <input type="checkbox" id="s6-role-arch">
+        <label for="s6-role-arch"><strong>Architect</strong> — Designs AI solutions, operating models, and integration patterns.</label>
+      </div>
+      <div class="ci">
+        <input type="checkbox" id="s6-role-orch">
+        <label for="s6-role-orch"><strong>Orchestrator</strong> — Scales and governs AI across the organization.</label>
+      </div>
+    </div>
+
+    <div class="sub-hd">Execution Plan</div>
+    <div class="qblock">
+      <div class="q-lbl">What are the top 3 AI initiatives planned for the next 6–12 months?</div>
+      <textarea class="q-ta" id="s6-initiatives" placeholder="1.&#10;2.&#10;3."></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">What change management activities are planned to drive AI adoption?</div>
+      <div class="q-hint">Think: training, communications, incentives, champions, feedback loops.</div>
+      <textarea class="q-ta" id="s6-change" placeholder="e.g. Lunch-and-learn series, AI Champions program, mandatory onboarding module, quarterly town halls…"></textarea>
+    </div>
+    <div class="qblock">
+      <div class="q-lbl">Who are the key executive sponsors and stakeholders for AI transformation?</div>
+      <textarea class="q-ta" id="s6-sponsors" placeholder="e.g. CEO (overall sponsor), CTO (technology delivery), COO (operational change)…"></textarea>
+    </div>
+
+    <div class="sub-hd">Readiness Checklist</div>
+    <div class="clblock">
+      <div class="cl-title">Check each item your organization has completed</div>
+      <div class="ci"><input type="checkbox" id="s6-r1"><label for="s6-r1">A delivery approach has been selected and communicated to the organization.</label></div>
+      <div class="ci"><input type="checkbox" id="s6-r2"><label for="s6-r2">Key AI roles are defined, documented, and assigned to specific individuals.</label></div>
+      <div class="ci"><input type="checkbox" id="s6-r3"><label for="s6-r3">A transformation roadmap covering the first 6–12 months exists.</label></div>
+      <div class="ci"><input type="checkbox" id="s6-r4"><label for="s6-r4">A change management and communication plan is in place.</label></div>
+      <div class="ci"><input type="checkbox" id="s6-r5"><label for="s6-r5">Adoption metrics and tracking mechanisms are defined.</label></div>
+      <div class="ci"><input type="checkbox" id="s6-r6"><label for="s6-r6">A continuous improvement loop (measure → learn → improve) is established.</label></div>
+    </div>
+  </div>
+
+  <!-- STEP ACTIONS -->
+  <div class="step-actions">
+    <button class="btn prev-btn btn-nav-disabled" onclick="prevStep()">&#8592; Previous</button>
+    <span class="step-counter" id="stepCounter">Step 1 of 6</span>
+    <button class="btn next-btn" onclick="nextStep()">Next &#8594;</button>
+  </div>
+
+</div><!-- /.page-main -->
+
+<!-- RIGHT COLUMN: STEP NAVIGATOR -->
+<div class="step-nav">
+  <div class="step-nav-header">Assessment Steps</div>
+  <div class="step-item" data-step="1" style="--si-col:var(--navy)" onclick="goToStep(1)">
+    <div class="si-num">1</div>
+    <div class="si-body">
+      <div class="si-title">VALUE</div>
+      <div class="si-sub">Core outcomes (why)</div>
+    </div>
+    <div class="si-badge" id="snb-s1">0/8</div>
+  </div>
+  <div class="step-item" data-step="2" style="--si-col:var(--blue)" onclick="goToStep(2)">
+    <div class="si-num">2</div>
+    <div class="si-body">
+      <div class="si-title">USE CASES</div>
+      <div class="si-sub">AI applications (where)</div>
+    </div>
+    <div class="si-badge" id="snb-s2">0/10</div>
+  </div>
+  <div class="step-item" data-step="3" style="--si-col:var(--teal)" onclick="goToStep(3)">
+    <div class="si-num">3</div>
+    <div class="si-body">
+      <div class="si-title">OP. MODEL</div>
+      <div class="si-sub">Workflows (how)</div>
+    </div>
+    <div class="si-badge" id="snb-s3">0/5</div>
+  </div>
+  <div class="step-item" data-step="4" style="--si-col:var(--green)" onclick="goToStep(4)">
+    <div class="si-num">4</div>
+    <div class="si-body">
+      <div class="si-title">FOUNDATION</div>
+      <div class="si-sub">Data &amp; tools (what)</div>
+    </div>
+    <div class="si-badge" id="snb-s4">0/5</div>
+  </div>
+  <div class="step-item" data-step="5" style="--si-col:var(--orange)" onclick="goToStep(5)">
+    <div class="si-num">5</div>
+    <div class="si-body">
+      <div class="si-title">GOVERNANCE</div>
+      <div class="si-sub">Control &amp; trust</div>
+    </div>
+    <div class="si-badge" id="snb-s5">0/12</div>
+  </div>
+  <div class="step-item" data-step="6" style="--si-col:var(--purple)" onclick="goToStep(6)">
+    <div class="si-num">6</div>
+    <div class="si-body">
+      <div class="si-title">EXECUTION</div>
+      <div class="si-sub">Delivery (how it happens)</div>
+    </div>
+    <div class="si-badge" id="snb-s6">0/10</div>
+  </div>
+  <div class="step-nav-btns">
+    <button class="btn prev-btn btn-nav-disabled" onclick="prevStep()">&#8592; Prev</button>
+    <button class="btn next-btn" onclick="nextStep()">Next &#8594;</button>
+  </div>
+</div>
+
+</div><!-- /.page -->
+
+<script>
+  /* ── SAVE / LOAD ────────────────────────────────────── */
+  var saveTimer;
+  function schedSave() { clearTimeout(saveTimer); saveTimer = setTimeout(doSave, 700); }
+
+  function doSave() {
+    var data = {};
+    document.querySelectorAll('[id]').forEach(function(el) {
+      if (el.tagName === 'INPUT' && (el.type === 'checkbox' || el.type === 'radio')) data[el.id] = el.checked;
+      else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT') data[el.id] = el.value;
+    });
+    sessionStorage.setItem('aipo-checklist', JSON.stringify(data));
+    var ind = document.getElementById('saveInd');
+    if (ind) { ind.classList.add('show'); setTimeout(function(){ ind.classList.remove('show'); }, 2000); }
+  }
+
+  function loadSaved() {
+    var raw = sessionStorage.getItem('aipo-checklist');
+    if (!raw) return;
+    try {
+      var data = JSON.parse(raw);
+      Object.keys(data).forEach(function(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        if (el.type === 'checkbox' || el.type === 'radio') { el.checked = !!data[id]; }
+        else el.value = data[id] || '';
+      });
+    } catch(e) {}
+  }
+
+  function resetAll() {
+    if (!confirm('Reset all checklist data? This cannot be undone.')) return;
+    sessionStorage.removeItem('aipo-checklist');
+    document.querySelectorAll('input, textarea, select').forEach(function(el) {
+      if (el.type === 'checkbox' || el.type === 'radio') el.checked = false;
+      else el.value = '';
+    });
+    document.querySelectorAll('.exp-item').forEach(function(el) { el.classList.remove('open'); });
+    updateProgress();
+    goToStep(1);
+  }
+
+  function printPage() { window.print(); }
+
+  /* ── PROGRESS ───────────────────────────────────────── */
+  function updateProgress() {
+    var all = document.querySelectorAll('input[type="checkbox"]');
+    var done = 0; all.forEach(function(c) { if (c.checked) done++; });
+    var total = all.length;
+    var pct = total > 0 ? Math.round(done / total * 100) : 0;
+    var fill = document.getElementById('progFill');
+    var pctEl = document.getElementById('progPct');
+    var lblEl = document.getElementById('progLbl');
+    if (fill) fill.style.width = pct + '%';
+    if (pctEl) pctEl.textContent = pct + '%';
+    if (lblEl) lblEl.textContent = done + ' / ' + total + ' items';
+
+    /* per-section + step nav badges */
+    ['s1','s2','s3','s4','s5','s6'].forEach(function(s, i) {
+      var sec = document.querySelector('.sc.' + s);
+      if (!sec) return;
+      var sc = sec.querySelectorAll('input[type="checkbox"]');
+      var sd = 0; sc.forEach(function(c){ if (c.checked) sd++; });
+      var badge = sec.querySelector('.sc-badge');
+      if (badge) badge.textContent = sd + ' / ' + sc.length;
+      var snbEl = document.getElementById('snb-' + s);
+      if (snbEl) snbEl.textContent = sd + '/' + sc.length;
+      var stepItem = document.querySelector('.step-item[data-step="' + (i+1) + '"]');
+      if (stepItem) stepItem.classList.toggle('si-done', sd === sc.length && sc.length > 0);
+    });
+  }
+
+  /* ── STEP NAVIGATION ────────────────────────────────── */
+  var currentStep = 1;
+
+  function goToStep(n) {
+    currentStep = n;
+    ['s1','s2','s3','s4','s5','s6'].forEach(function(s, i) {
+      var el = document.querySelector('.sc.' + s);
+      if (el) el.classList.toggle('step-active', i + 1 === n);
+    });
+    document.querySelectorAll('.step-item[data-step]').forEach(function(item) {
+      item.classList.toggle('si-active', parseInt(item.dataset.step) === n);
+    });
+    var counter = document.getElementById('stepCounter');
+    if (counter) counter.textContent = 'Step ' + n + ' of 6';
+    document.querySelectorAll('.prev-btn').forEach(function(b) {
+      b.classList.toggle('btn-nav-disabled', n === 1);
+    });
+    document.querySelectorAll('.next-btn').forEach(function(b) {
+      b.classList.toggle('btn-nav-disabled', n === 6);
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function prevStep() { if (currentStep > 1) goToStep(currentStep - 1); }
+  function nextStep() { if (currentStep < 6) goToStep(currentStep + 1); }
+
+  /* ── EXPAND TOGGLE ──────────────────────────────────── */
+  function toggleExp(cb) {
+    var item = cb.closest('.exp-item');
+    if (item) item.classList.toggle('open', cb.checked);
+  }
+
+  /* ── INIT ────────────────────────────────────────────── */
+  function bootAssessmentMain() {
+    var pw = document.querySelector('.prog-wrap');
+    if (!pw || pw.dataset.aipoWired === '1') return;
+    pw.dataset.aipoWired = '1';
+    loadSaved();
+    document.querySelectorAll('.exp-head input[type="checkbox"]').forEach(function(cb) {
+      if (cb.checked) { var item = cb.closest('.exp-item'); if (item) item.classList.add('open'); }
+    });
+    updateProgress();
+    goToStep(1);
+
+    document.querySelectorAll('input, textarea, select').forEach(function(el) {
+      el.addEventListener('input',  function() { schedSave(); if (el.type !== 'checkbox' && el.type !== 'radio') return; updateProgress(); });
+      el.addEventListener('change', function() {
+        schedSave(); updateProgress();
+        if (el.type === 'checkbox') {
+          var ei = el.closest('.exp-head'); if (ei) toggleExp(el);
+        }
+      });
+    });
+  }
+  document.addEventListener('DOMContentLoaded', bootAssessmentMain);
+  document.addEventListener('aipo:content-loaded', bootAssessmentMain);
+</script>
+
+<!-- Evidence Panel remains here -->
+<script>
+  /* ── EVIDENCE PANEL ──────────────────────────────────── */
+  (function() {
+    var EV_KEY = 'aipo-assess-ev';
+    function evLoad() { try { return JSON.parse(sessionStorage.getItem(EV_KEY) || '{}'); } catch(e) { return {}; } }
+    function evSave(d) { sessionStorage.setItem(EV_KEY, JSON.stringify(d)); }
+
+    var curKey = null, overlay, panel, entriesWrap;
+
+    var TYPES = [
+      'Policy Document','Procedure / SOP','Data Governance Policy',
+      'GDPR Compliance Document','Security Policy','Privacy Notice',
+      'Training Record','Audit Report','Contract / Agreement',
+      'Technical Specification','Project Plan','Register / Inventory',
+      'Framework Document','Risk Assessment','Meeting Minutes','Other'
+    ];
+    var typeOptsHtml = '<option value="">— Select type —</option>' +
+      TYPES.map(function(t){ return '<option value="'+t+'">'+t+'</option>'; }).join('');
+
+    function init() {
+      document.querySelectorAll('.ep-overlay, .ep-panel').forEach(function (el) {
+        el.remove();
+      });
+      overlay = document.createElement('div');
+      overlay.className = 'ep-overlay';
+      overlay.addEventListener('click', closePanel);
+
+      panel = document.createElement('div');
+      panel.className = 'ep-panel';
+      panel.innerHTML =
+        '<div class="ep-head">' +
+          '<div class="ep-head-inner">' +
+            '<div class="ep-eyebrow">Evidence &amp; Documentation</div>' +
+            '<div class="ep-htitle" id="ep-htitle"></div>' +
+          '</div>' +
+          '<button class="ep-hclose" id="ep-hclose">&#x2715;</button>' +
+        '</div>' +
+        '<div class="ep-body">' +
+          '<div class="ep-entries" id="ep-entries"></div>' +
+          '<button class="ep-add" id="ep-add">+ Add Evidence Entry</button>' +
+        '</div>' +
+        '<div class="ep-foot">Entries are saved in your browser session. Use the Location field to reference files in SharePoint, a shared drive, or any URL.</div>';
+
+      document.body.appendChild(overlay);
+      document.body.appendChild(panel);
+
+      entriesWrap = document.getElementById('ep-entries');
+      document.getElementById('ep-hclose').addEventListener('click', closePanel);
+      document.getElementById('ep-add').addEventListener('click', addEntry);
+
+      injectButtons();
+    }
+
+    function openPanel(key, title) {
+      curKey = key;
+      document.getElementById('ep-htitle').textContent = title;
+      render();
+      overlay.classList.add('ep-open');
+      panel.classList.add('ep-open');
+    }
+
+    function closePanel() {
+      overlay.classList.remove('ep-open');
+      panel.classList.remove('ep-open');
+      curKey = null;
+    }
+
+    function render() {
+      var data = evLoad(), list = data[curKey] || [];
+      entriesWrap.innerHTML = '';
+      if (!list.length) {
+        entriesWrap.innerHTML =
+          '<div class="ep-empty">' +
+            '<div class="ep-empty-icon">📋</div>' +
+            '<div class="ep-empty-title">No evidence linked yet</div>' +
+            '<div class="ep-empty-sub">Add files, documents and records that<br>demonstrate this item is complete.</div>' +
+          '</div>';
+        return;
+      }
+      list.forEach(function(e, i) { entriesWrap.appendChild(buildCard(e, i)); });
+    }
+
+    function buildCard(entry, i) {
+      var d = document.createElement('div');
+      d.className = 'ep-card';
+      d.innerHTML =
+        '<div class="ep-card-head">' +
+          '<span class="ep-card-lbl">Entry ' + (i+1) + '</span>' +
+          '<button class="ep-card-del" data-i="'+i+'">Remove</button>' +
+        '</div>' +
+        '<div class="ep-card-fields">' +
+          '<div class="epf"><label>File / Document Name</label>' +
+            '<input type="text" data-f="name" data-i="'+i+'" value="'+esc(entry.name||'')+'" placeholder="e.g. GDPR Policy v2.1.pdf"></div>' +
+          '<div class="epf"><label>File Type</label>' +
+            '<select data-f="fileType" data-i="'+i+'">'+typeOptsHtml+'</select></div>' +
+          '<div class="epf epf-full"><label>Location / Path / URL</label>' +
+            '<input type="text" data-f="location" data-i="'+i+'" value="'+esc(entry.location||'')+'" placeholder="e.g. SharePoint › Legal › Compliance, or https://…"></div>' +
+          '<div class="epf"><label>Ownership</label>' +
+            '<input type="text" data-f="ownership" data-i="'+i+'" value="'+esc(entry.ownership||'')+'" placeholder="Name or team"></div>' +
+          '<div class="epf"><label>Last Updated</label>' +
+            '<input type="date" data-f="lastUpdated" data-i="'+i+'" value="'+esc(entry.lastUpdated||'')+'"></div>' +
+          '<div class="epf epf-full"><label>Notes</label>' +
+            '<textarea data-f="notes" data-i="'+i+'" placeholder="Context, version info, caveats, links…">'+esc(entry.notes||'')+'</textarea></div>' +
+        '</div>';
+      d.querySelector('select[data-f="fileType"]').value = entry.fileType || '';
+      d.querySelector('.ep-card-del').addEventListener('click', function(e) {
+        var idx = parseInt(e.target.dataset.i);
+        var data = evLoad();
+        if (data[curKey]) { data[curKey].splice(idx,1); if (!data[curKey].length) delete data[curKey]; evSave(data); }
+        render(); refreshBadge(curKey);
+      });
+      d.querySelectorAll('input,select,textarea').forEach(function(el) {
+        el.addEventListener('input', onFieldChange);
+        el.addEventListener('change', onFieldChange);
+      });
+      return d;
+    }
+
+    function onFieldChange(e) {
+      var i = parseInt(e.target.dataset.i), f = e.target.dataset.f;
+      var data = evLoad();
+      if (!data[curKey]) data[curKey] = [];
+      if (!data[curKey][i]) data[curKey][i] = {};
+      data[curKey][i][f] = e.target.value;
+      evSave(data); refreshBadge(curKey);
+    }
+
+    function addEntry() {
+      var data = evLoad();
+      if (!data[curKey]) data[curKey] = [];
+      data[curKey].push({name:'',fileType:'',location:'',ownership:'',lastUpdated:'',notes:''});
+      evSave(data); render(); refreshBadge(curKey);
+      setTimeout(function(){ panel.querySelector('.ep-body').scrollTop = 99999; }, 60);
+    }
+
+    function refreshBadge(key) {
+      var data = evLoad(), n = (data[key]||[]).length;
+      var btn = document.querySelector('.ev-trigger[data-evkey="'+key+'"]');
+      if (!btn) return;
+      btn.classList.toggle('has-ev', n > 0);
+      btn.querySelector('.ev-ct').textContent = n > 0 ? n : '';
+    }
+
+    function esc(s) {
+      return String(s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+    }
+
+    function makeBtn(key, title) {
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ev-trigger';
+      btn.dataset.evkey = key;
+      btn.title = 'Add or view evidence for this item';
+      btn.innerHTML =
+        '<svg width="10" height="12" viewBox="0 0 10 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round">' +
+          '<path d="M6 1H2a1 1 0 00-1 1v8a1 1 0 001 1h6a1 1 0 001-1V4L6 1z"/>' +
+          '<path d="M6 1v3h3"/>' +
+        '</svg>' +
+        '<span class="ev-ct"></span>';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault(); e.stopPropagation();
+        openPanel(key, title);
+      });
+      return btn;
+    }
+
+    function injectButtons() {
+      document.querySelectorAll('.ci > input[type="checkbox"][id]').forEach(function(cb) {
+        var key = cb.id;
+        var lbl = document.querySelector('label[for="'+key+'"]');
+        var title = lbl ? lbl.textContent.trim() : key;
+        cb.parentElement.appendChild(makeBtn(key, title));
+        refreshBadge(key);
+      });
+    }
+
+    function bootEvidence() {
+      if (!document.querySelector('.ci > input[type="checkbox"][id]')) return;
+      init();
+    }
+    document.addEventListener('DOMContentLoaded', bootEvidence);
+    document.addEventListener('aipo:content-loaded', bootEvidence);
+  })();
+</script>
+
+</div>
+<script src="spa-nav.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,238 @@
+/* ═══════════════════════════════════════════════════
+   AIPO – Shared Styles
+   Loaded by every page.
+   Contains: fonts · reset · CSS variables · nav shell
+   ═══════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,600;0,700;1,600&display=swap');
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+/* ── GLOBAL VARIABLES ──────────────────────────────── */
+:root {
+  /* Layout */
+  --header-h:  64px;
+  --sidebar-w: 260px;
+  /* Core palette */
+  --navy:      #1a2a5e;
+  --navy-dark: #121e45;
+  --blue-mid:  #1e4fa0;
+  --blue:      #1e4fa0;
+  --teal:      #1a6b73;
+  --green:     #2d6b2d;
+  --orange:    #d4580a;
+  --purple:    #4a2080;
+  --gold:      #0a6648;
+  --light-bg:  #f7f9fc;
+  --bg:        #eef2f8;
+  --border:    #d0d8e8;
+  --text:      #1a1a2e;
+  --muted:     #5a6480;
+  --row-alt:   #f5f8fd;
+  /* Domain palette (prerequisites / foundation pages) */
+  --d1: #854d0e;  --d1b: #fef3c7;
+  --d2: #1e4fa0;  --d2b: #dbeafe;
+  --d3: #991b1b;  --d3b: #fee2e2;
+  --d4: #1a3060;  --d4b: #e0e7ff;
+  --d5: #0f766e;  --d5b: #ccfbf1;
+  --d6: #6d28d9;  --d6b: #ede9fe;
+  --d7: #065f46;  --d7b: #d1fae5;
+}/* ── SHARED NAV SHELL ─────────────────────────────── */
+  header.site-header {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: var(--header-h); background: var(--navy);
+    display: flex; align-items: center; gap: 14px;
+    padding: 0 28px; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,.22);
+  }
+  .sh-icon {
+    width: 36px; height: 36px; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--teal), #1e4fa0);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+  }
+  .sh-title {
+    font-family: 'Lora', serif;
+    font-size: 1.35rem; font-weight: 800; letter-spacing: .04em; color: #fff; line-height: 1;
+  }
+  .sh-sub {
+    font-size: 0.88rem; color: rgba(255,255,255,.55);
+    letter-spacing: .06em; text-transform: uppercase; margin-top: 2px;
+  }
+  .sh-badge {
+    margin-left: auto; background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.75);
+    font-size: 0.88rem; font-weight: 600; letter-spacing: .08em;
+    text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+  }
+  aside.site-sidebar {
+    position: fixed; top: var(--header-h); left: 0; bottom: 0;
+    width: var(--sidebar-w); background: #fff;
+    border-right: 1px solid var(--border); overflow-y: auto;
+    padding: 24px 0 32px; display: flex; flex-direction: column; z-index: 99;
+  }
+  .sn-label {
+    font-size: 0.88rem; font-weight: 700; letter-spacing: .12em;
+    text-transform: uppercase; color: #5a6480; padding: 0 20px 8px; margin-top: 4px;
+  }
+  .sn-item {
+    display: flex; align-items: flex-start; gap: 12px; padding: 11px 20px;
+    text-decoration: none; color: #1a1a2e; border-left: 3px solid transparent;
+    transition: background .15s, border-color .15s;
+  }
+  .sn-item:hover  { background: #eef2f8; border-left-color: #1e4fa0; }
+  .sn-item.active { background: #edf2fb; border-left-color: #1a2a5e; }
+  .sn-num {
+    width: 24px; height: 24px; border-radius: 6px; display: flex;
+    align-items: center; justify-content: center;
+    font-size: 0.88rem; font-weight: 800; flex-shrink: 0; margin-top: 1px;
+  }
+  .sn-text { flex: 1; }
+  .sn-text strong { display: block; font-size: 0.88rem; font-weight: 700; line-height: 1.3; }
+  .sn-text span   { font-size: 0.88rem; color: #5a6480; line-height: 1.4; }
+  .sn-p0 { background: #fef3c7; color: #92400e; }
+  .sn-p1 { background: #fde68a; color: #78350f; }
+  .sn-c1 { background: #e8f0fb; color: #1a2a5e; }
+  .sn-c2 { background: #e6f4f5; color: #1a6b73; }
+  .sn-c3 { background: #e9f3e9; color: #2d6b2d; }
+  .sn-c4 { background: #fdf0e8; color: #d4580a; }
+  .sn-c5 { background: #ede8f5; color: #4a2080; }
+  .sn-c6 { background: #e4f7f0; color: #0a6648; }
+  .sn-footer {
+    margin-top: auto; padding: 20px 20px 0;
+    border-top: 1px solid var(--border); font-size: 0.88rem; color: #5a6480; line-height: 1.6;
+  }
+  .sn-footer a {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 5px 12px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--navy);
+    text-decoration: none;
+    background: #eef2f8;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+  }
+  .sn-footer a:hover {
+    background: #e8edf5;
+    border-color: var(--blue-mid);
+    color: var(--blue-mid);
+  }
+  .view-toggle-btn {
+    display: flex; align-items: center; gap: 6px;
+    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
+    color: rgba(255,255,255,.85); font-size: 0.88rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 20px;
+    cursor: pointer; transition: background .15s; white-space: nowrap; margin-left: 10px;
+  }
+  .view-toggle-btn:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
+
+  /* ── VIEW SWITCHER ───────────────────────────────────── */
+  .view-switcher {
+    display: flex; gap: 4px;
+  }
+  .view-opt {
+    background: none;
+    border: 1px solid rgba(255,255,255,.22);
+    color: rgba(255,255,255,.75);
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .view-opt:hover {
+    border-color: rgba(255,255,255,.45);
+    color: rgba(255,255,255,.95);
+  }
+  .view-opt.active {
+    background: rgba(255,255,255,.15);
+    border-color: rgba(255,255,255,.35);
+    color: white;
+  }
+
+/* ── LAYOUT VIEWS ──────────────────────────────────── */
+body.view-clean { 
+  background: white !important; 
+  padding-left: var(--sidebar-w) !important;
+  padding-right: 0 !important;
+  padding-top: var(--header-h) !important;
+  padding-bottom: 0 !important;
+}
+body.view-clean .page { max-width: none !important; margin: 0 !important; }
+body.view-clean:not(.prereq-page) *:not(.site-header):not(.site-sidebar):not(header):not(aside) { 
+  border-radius: 0 !important; 
+}
+
+/* Internal padding for List view elements while keeping containers flush */
+/* Excluding checklist.html via :not(.checklist-page) - depends on adding class to body */
+body.view-clean:not(.checklist-page):not(.prereq-page) .banner,
+body.view-clean:not(.checklist-page):not(.prereq-page) .sec-divider,
+body.view-clean:not(.checklist-page):not(.prereq-page) .domain,
+body.view-clean:not(.checklist-page):not(.prereq-page) .matrix-wrap,
+body.view-clean:not(.checklist-page):not(.prereq-page) .cl-wrap,
+body.view-clean:not(.checklist-page):not(.prereq-page) .readiness-bar,
+body.view-clean:not(.checklist-page):not(.prereq-page) .why-strip {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+/* Fix for nested horizontal containers like checklist items or matrix headers */
+body.view-clean:not(.checklist-page):not(.prereq-page) .matrix-header,
+body.view-clean:not(.checklist-page):not(.prereq-page) .dep-legend,
+body.view-clean:not(.checklist-page):not(.prereq-page) .cl-section-header,
+body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
+  padding-left: 20px !important;
+}
+
+/* ── PRINT BASE ─────────────────────────────────────── */
+@media print {
+  body { padding: 0; background: white; }
+  .site-header, .site-sidebar, .view-toggle-btn, .view-switcher { display: none !important; }
+  .page { max-width: none !important; }
+}
+/* ── FRAMEWORK ALIGNMENT COMPONENTS ───────────────── */
+.fw-badges { display: flex; flex-wrap: wrap; gap: 5px; padding: 6px 16px 4px; }
+.fw-badge {
+  font-size: 0.88rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 20px; border: 1.5px solid currentColor;
+  white-space: nowrap; display: inline-block;
+}
+.fw-itil  { color: #1e4fa0; background: #edf2fb; }
+.fw-pmbok { color: #1a6b73; background: #e6f3f4; }
+.fw-nist  { color: #6d28d9; background: #f0eaf8; }
+.fw-cobit { color: #b45309; background: #fef3c7; }
+.fw-cmmi  { color: #2d6b2d; background: #e8f4e8; }
+
+.fw-panel { margin: 0 16px 12px; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.fw-panel summary {
+  padding: 7px 12px; font-size: 0.88rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+  cursor: pointer; background: var(--row-alt); color: var(--navy);
+  list-style: none; display: flex; align-items: center; justify-content: space-between;
+}
+.fw-panel summary::-webkit-details-marker { display: none; }
+.fw-panel summary::after { content: "▸"; transition: transform .2s; }
+.fw-panel[open] summary::after { transform: rotate(90deg); }
+.fw-panel .fw-panel-body {
+  padding: 10px 14px; font-size: 0.88rem; color: #333; line-height: 1.55;
+  border-top: 1px solid var(--border);
+}
+.fw-panel .fw-panel-body strong { color: var(--navy); }
+.fw-panel .fw-panel-body p { margin-bottom: 6px; }
+.fw-panel .fw-panel-body ul { list-style: none; padding: 0; margin-bottom: 6px; }
+.fw-panel .fw-panel-body ul li { padding: 2px 0 2px 12px; position: relative; }
+.fw-panel .fw-panel-body ul li::before { content: "›"; position: absolute; left: 0; color: #888; }
+
+.fw-cycle { display: flex; margin: 8px 0; border: 1.5px solid var(--border); border-radius: 4px; overflow: hidden; }
+.fw-cycle-step {
+  flex: 1; padding: 6px 4px; text-align: center;
+  font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  border-right: 1px solid var(--border); background: var(--row-alt); color: var(--navy);
+}
+.fw-cycle-step:last-child { border-right: none; }
+
+
