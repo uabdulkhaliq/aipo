@@ -235,4 +235,157 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
 }
 .fw-cycle-step:last-child { border-right: none; }
 
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE MEDIA QUERIES FOR SHARED COMPONENTS
+   ════════════════════════════════════════════════════════════ */
 
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  :root {
+    --sidebar-w: 200px;
+    --header-h: 56px;
+  }
+  header.site-header {
+    height: var(--header-h);
+    padding: 0 16px;
+    gap: 10px;
+  }
+  .sh-title {
+    font-size: 1.1rem;
+  }
+  .sh-sub {
+    display: none;
+  }
+  .sh-badge {
+    display: none;
+  }
+  aside.site-sidebar {
+    width: var(--sidebar-w);
+    padding: 16px 0 24px;
+  }
+  .sn-label {
+    font-size: 0.75rem;
+    padding: 0 12px 4px;
+  }
+  .sn-item {
+    padding: 8px 12px;
+    gap: 8px;
+  }
+  .sn-text strong {
+    font-size: 0.85rem;
+  }
+  .sn-text span {
+    font-size: 0.75rem;
+  }
+  .fw-badge {
+    font-size: 0.8rem;
+    padding: 1px 6px;
+  }
+  .fw-panel summary {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  .fw-panel .fw-panel-body {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Tablet / Large Mobile (576px - 767px) */
+@media (max-width: 767px) and (min-width: 576px) {
+  :root {
+    --sidebar-w: 180px;
+    --header-h: 52px;
+  }
+  header.site-header {
+    height: var(--header-h);
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .sh-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+  .sh-title {
+    font-size: 0.95rem;
+  }
+  .sh-sub {
+    display: none;
+  }
+  .sh-badge {
+    display: none;
+  }
+  .view-toggle-btn {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    margin-left: 4px;
+  }
+  aside.site-sidebar {
+    width: var(--sidebar-w);
+    padding: 12px 0 20px;
+  }
+  .sn-label {
+    font-size: 0.7rem;
+    padding: 0 10px 3px;
+  }
+  .sn-item {
+    padding: 7px 10px;
+    gap: 6px;
+  }
+  .sn-num {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+  .sn-text strong {
+    font-size: 0.8rem;
+  }
+  .sn-text span {
+    font-size: 0.7rem;
+  }
+  .sn-footer {
+    padding: 12px 10px 0;
+    font-size: 0.65rem;
+  }
+}
+
+/* Mobile (< 576px) */
+@media (max-width: 575px) {
+  :root {
+    --sidebar-w: 0px;
+    --header-h: 48px;
+  }
+  header.site-header {
+    height: var(--header-h);
+    padding: 0 12px;
+    gap: 8px;
+  }
+  .sh-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+  .sh-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  .sh-sub {
+    display: none;
+  }
+  .sh-badge {
+    display: none;
+  }
+  .view-toggle-btn {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    margin-left: 2px;
+    gap: 4px;
+  }
+  aside.site-sidebar {
+    display: none;
+  }
+  body.view-clean { 
+    padding-left: 0 !important;
+  }
+}
