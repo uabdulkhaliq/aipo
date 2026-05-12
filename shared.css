@@ -118,14 +118,8 @@
     color: var(--blue-mid);
   }
   .view-toggle-btn {
-    display: flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.22);
-    color: rgba(255,255,255,.85); font-size: 0.88rem; font-weight: 600;
-    letter-spacing: .06em; text-transform: uppercase;
-    padding: 5px 12px; border-radius: 20px;
-    cursor: pointer; transition: background .15s; white-space: nowrap; margin-left: 10px;
+    display: none !important;
   }
-  .view-toggle-btn:hover { background: rgba(255,255,255,.18); border-color: rgba(255,255,255,.4); }
 
   /* ── VIEW SWITCHER ───────────────────────────────────── */
   .view-switcher {
@@ -188,10 +182,18 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
   padding-left: 20px !important;
 }
 
+@media (max-width: 900px) {
+  body.view-clean {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: calc(var(--header-h) + var(--aipo-top-nav-h, 56px)) !important;
+  }
+}
+
 /* ── PRINT BASE ─────────────────────────────────────── */
 @media print {
   body { padding: 0; background: white; }
-  .site-header, .site-sidebar, .view-toggle-btn, .view-switcher { display: none !important; }
+  .site-header, .site-sidebar, .site-nav-mobile, .page-section-jump, .assess-nav-steps, .view-switcher { display: none !important; }
   .page { max-width: none !important; }
 }
 /* ── FRAMEWORK ALIGNMENT COMPONENTS ───────────────── */
@@ -234,4 +236,5 @@ body.view-clean:not(.checklist-page):not(.prereq-page) .cl-items {
   border-right: 1px solid var(--border); background: var(--row-alt); color: var(--navy);
 }
 .fw-cycle-step:last-child { border-right: none; }
+
 

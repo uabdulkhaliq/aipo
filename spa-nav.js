@@ -61,6 +61,12 @@
         ? document.querySelector('.sn-item[href*="index.html"]')
         : document.querySelector('.sn-item[href="' + pageName + '.html"]'));
     if (link) link.classList.add('active');
+
+    var sel = document.getElementById('aipo-nav-select');
+    if (sel) {
+      var opt = sel.querySelector('option[data-page="' + pageName + '"]');
+      if (opt) sel.value = opt.value;
+    }
   }
 
   var navigating = false;

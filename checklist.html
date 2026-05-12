@@ -48,8 +48,22 @@
   <div class="cl-wrap">
     <div class="cl-bar-wrap"><div class="cl-bar" id="cl-bar"></div></div>
 
+    <nav class="page-section-jump" aria-label="Jump to domain checklist">
+      <label class="page-section-jump-label" for="checklist-domain-jump">Domains</label>
+      <select id="checklist-domain-jump" class="page-section-jump-select" data-jump="1">
+        <option value="">Jump to…</option>
+        <option value="cl-domain-1">01 · Process Maturity</option>
+        <option value="cl-domain-2">02 · Data Foundation</option>
+        <option value="cl-domain-3">03 · Information Security</option>
+        <option value="cl-domain-4">04 · Privacy &amp; Compliance</option>
+        <option value="cl-domain-5">05 · Technology</option>
+        <option value="cl-domain-6">06 · People &amp; Change</option>
+        <option value="cl-domain-7">07 · Ethics &amp; AI</option>
+      </select>
+    </nav>
+
     <!-- Domain 1 -->
-    <div class="cl-section cl-d1">
+    <div class="cl-section cl-d1" id="cl-domain-1">
       <div class="cl-section-header">
         <div class="cl-s-num">01</div>
         <div class="cl-s-name">Process Maturity</div>
@@ -64,7 +78,7 @@
     </div>
 
     <!-- Domain 2 -->
-    <div class="cl-section cl-d2">
+    <div class="cl-section cl-d2" id="cl-domain-2">
       <div class="cl-section-header">
         <div class="cl-s-num">02</div>
         <div class="cl-s-name">Data Foundation</div>
@@ -80,7 +94,7 @@
     </div>
 
     <!-- Domain 3 -->
-    <div class="cl-section cl-d3">
+    <div class="cl-section cl-d3" id="cl-domain-3">
       <div class="cl-section-header">
         <div class="cl-s-num">03</div>
         <div class="cl-s-name">Information Security</div>
@@ -96,7 +110,7 @@
     </div>
 
     <!-- Domain 4 -->
-    <div class="cl-section cl-d4">
+    <div class="cl-section cl-d4" id="cl-domain-4">
       <div class="cl-section-header">
         <div class="cl-s-num">04</div>
         <div class="cl-s-name">Privacy &amp; Compliance</div>
@@ -112,7 +126,7 @@
     </div>
 
     <!-- Domain 5 -->
-    <div class="cl-section cl-d5">
+    <div class="cl-section cl-d5" id="cl-domain-5">
       <div class="cl-section-header">
         <div class="cl-s-num">05</div>
         <div class="cl-s-name">Technology Baseline</div>
@@ -128,7 +142,7 @@
     </div>
 
     <!-- Domain 6 -->
-    <div class="cl-section cl-d6">
+    <div class="cl-section cl-d6" id="cl-domain-6">
       <div class="cl-section-header">
         <div class="cl-s-num">06</div>
         <div class="cl-s-name">People &amp; Change</div>
@@ -144,7 +158,7 @@
     </div>
 
     <!-- Domain 7 -->
-    <div class="cl-section cl-d7">
+    <div class="cl-section cl-d7" id="cl-domain-7">
       <div class="cl-section-header">
         <div class="cl-s-num">07</div>
         <div class="cl-s-name">Ethics &amp; Principles</div>
@@ -386,6 +400,7 @@
 </script>
 
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 
 </body>

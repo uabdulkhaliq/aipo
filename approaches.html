@@ -17,51 +17,75 @@
     <p>Four Paths. One Goal: Real, Scalable Impact.</p>
   </div>
 
-  <div class="approach-grid">
-    <div class="approach-cell row-label label-head">Approach</div>
-    <div class="approach-cell approach-head a1">1. FRAMEWORK</div>
-    <div class="approach-cell approach-head a2">2. HIERARCHICAL</div>
-    <div class="approach-cell approach-head a3">3. PRAGMATIC</div>
-    <div class="approach-cell approach-head a4">4. GOVERNANCE &amp; TRUST</div>
+  <nav class="page-section-jump" aria-label="Jump on approaches page">
+    <label class="page-section-jump-label" for="app-page-jump">Jump to</label>
+    <select id="app-page-jump" class="page-section-jump-select" data-jump="1">
+      <option value="">Choose…</option>
+      <option value="app-compare">Approach comparison</option>
+      <option value="app-together">How they work together</option>
+    </select>
+  </nav>
 
-    <div class="approach-cell row-label">What It Is</div>
-    <div class="approach-cell row-val">Use established frameworks to integrate AI into existing processes.</div>
-    <div class="approach-cell row-val">Top-down transformation driven by strategy and organizational goals.</div>
-    <div class="approach-cell row-val">Bottom-up, use-case-driven adoption based on real pain points.</div>
-    <div class="approach-cell row-val">Risk-based AI transformation that embeds governance, compliance and responsible AI controls across the lifecycle.</div>
+  <!-- Row-based desktop grid + stacks cleanly on narrow screens -->
+  <div class="approach-matrix" id="app-compare">
+    <div class="am-head-row">
+      <div class="am-corner label-head">Approach</div>
+      <div class="approach-head a1">1. FRAMEWORK</div>
+      <div class="approach-head a2">2. HIERARCHICAL</div>
+      <div class="approach-head a3">3. PRAGMATIC</div>
+      <div class="approach-head a4">4. GOVERNANCE &amp; TRUST</div>
+    </div>
 
-    <div class="approach-cell row-label">How It Works</div>
-    <div class="approach-cell row-val">Map AI to processes, align with governance and controls, extend current workflows.</div>
-    <div class="approach-cell row-val">Set strategic objectives, cascade initiatives, align roles, KPIs and resources.</div>
-    <div class="approach-cell row-val">Identify high-impact opportunities, experiment quickly, scale what works.</div>
-    <div class="approach-cell row-val">Classify AI use cases by risk, define controls, assign accountability, validate models/data, and monitor continuously.</div>
+    <div class="am-row">
+      <div class="am-dim row-label">What It Is</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body">Use established frameworks to integrate AI into existing processes.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body">Top-down transformation driven by strategy and organizational goals.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body">Bottom-up, use-case-driven adoption based on real pain points.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body">Risk-based AI transformation that embeds governance, compliance and responsible AI controls across the lifecycle.</span></div>
+    </div>
 
-    <div class="approach-cell row-label">Best For</div>
-    <div class="approach-cell row-val">Regulated environments, mature processes, strict compliance.</div>
-    <div class="approach-cell row-val">Coordinated transformation, cross-functional alignment, large organizations.</div>
-    <div class="approach-cell row-val">Fast-moving teams, early adoption, innovation-driven environments.</div>
-    <div class="approach-cell row-val">Regulated industries, enterprise-wide AI rollouts, high-impact decisions, and multi-region organizations.</div>
+    <div class="am-row">
+      <div class="am-dim row-label">How It Works</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body">Map AI to processes, align with governance and controls, extend current workflows.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body">Set strategic objectives, cascade initiatives, align roles, KPIs and resources.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body">Identify high-impact opportunities, experiment quickly, scale what works.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body">Classify AI use cases by risk, define controls, assign accountability, validate models/data, and monitor continuously.</span></div>
+    </div>
 
-    <div class="approach-cell row-label">Strength</div>
-    <div class="approach-cell row-val">Predictable, controlled, scalable.</div>
-    <div class="approach-cell row-val">Clear direction, alignment, accountability.</div>
-    <div class="approach-cell row-val">Fast results, high engagement, tangible impact.</div>
-    <div class="approach-cell row-val">Builds trust, reduces legal and reputational exposure, improves auditability, and enables safer scale.</div>
+    <div class="am-row">
+      <div class="am-dim row-label">Best For</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body">Regulated environments, mature processes, strict compliance.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body">Coordinated transformation, cross-functional alignment, large organizations.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body">Fast-moving teams, early adoption, innovation-driven environments.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body">Regulated industries, enterprise-wide AI rollouts, high-impact decisions, and multi-region organizations.</span></div>
+    </div>
 
-    <div class="approach-cell row-label">Limitation</div>
-    <div class="approach-cell row-val">Slower to adapt, may limit experimentation.</div>
-    <div class="approach-cell row-val">Risk of misalignment with real operational needs.</div>
-    <div class="approach-cell row-val">Can become fragmented without coordination.</div>
-    <div class="approach-cell row-val">Can slow early experimentation if controls become too heavy or too centralized.</div>
+    <div class="am-row">
+      <div class="am-dim row-label">Strength</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body">Predictable, controlled, scalable.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body">Clear direction, alignment, accountability.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body">Fast results, high engagement, tangible impact.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body">Builds trust, reduces legal and reputational exposure, improves auditability, and enables safer scale.</span></div>
+    </div>
 
-    <div class="approach-cell row-label">Framework Alignment</div>
-    <div class="approach-cell row-val"><span class="fw-badge fw-pmbok">PMBOK</span> Maps to <strong>PMBOK Predictive (Waterfall)</strong> lifecycle. Use when scope, requirements and governance constraints are well-defined upfront. Ideal for regulated environments where change control is mandatory.</div>
-    <div class="approach-cell row-val"><span class="fw-badge fw-itil">ITIL</span> Aligns to <strong>ITIL Service Strategy</strong> practice - top-down definition of service value, portfolio decisions and investment prioritization cascade through the organization.</div>
-    <div class="approach-cell row-val"><span class="fw-badge fw-pmbok">PMBOK</span> Maps to <strong>PMBOK Adaptive (Agile)</strong> lifecycle. Use when requirements emerge through iteration and speed of learning matters more than upfront control. Ideal for Generative AI pilots and emerging use cases.</div>
-    <div class="approach-cell row-val"><span class="fw-badge fw-itil">NIST / ISO</span> Maps to <strong>NIST AI RMF</strong> (Govern, Map, Measure, Manage) and <strong>ISO/IEC 42001</strong> (AI management system requirements).</div>
+    <div class="am-row">
+      <div class="am-dim row-label">Limitation</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body">Slower to adapt, may limit experimentation.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body">Risk of misalignment with real operational needs.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body">Can become fragmented without coordination.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body">Can slow early experimentation if controls become too heavy or too centralized.</span></div>
+    </div>
+
+    <div class="am-row">
+      <div class="am-dim row-label">Framework Alignment</div>
+      <div class="am-val"><span class="am-ph approach-ph-a1">1 · Framework</span><span class="am-body"><span class="fw-badge fw-pmbok">PMBOK</span> Maps to <strong>PMBOK Predictive (Waterfall)</strong> lifecycle. Use when scope, requirements and governance constraints are well-defined upfront. Ideal for regulated environments where change control is mandatory.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a2">2 · Hierarchical</span><span class="am-body"><span class="fw-badge fw-itil">ITIL</span> Aligns to <strong>ITIL Service Strategy</strong> practice - top-down definition of service value, portfolio decisions and investment prioritization cascade through the organization.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a3">3 · Pragmatic</span><span class="am-body"><span class="fw-badge fw-pmbok">PMBOK</span> Maps to <strong>PMBOK Adaptive (Agile)</strong> lifecycle. Use when requirements emerge through iteration and speed of learning matters more than upfront control. Ideal for Generative AI pilots and emerging use cases.</span></div>
+      <div class="am-val"><span class="am-ph approach-ph-a4">4 · Governance &amp; Trust</span><span class="am-body"><span class="fw-badge fw-itil">NIST / ISO</span> Maps to <strong>NIST AI RMF</strong> (Govern, Map, Measure, Manage) and <strong>ISO/IEC 42001</strong> (AI management system requirements).</span></div>
+    </div>
   </div>
 
-  <div class="bottom-section">
+  <div class="bottom-section" id="app-together">
     <div class="bottom-block">
       <div class="bottom-title">HOW THEY WORK TOGETHER</div>
       <div class="flow-items">
@@ -112,7 +136,7 @@
   </div>
 </div>
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 </body>
 </html>
-

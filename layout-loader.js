@@ -109,17 +109,48 @@ window.toggleView = function() {
       var temp = document.createElement('div');
       temp.innerHTML = html;
 
-      // Insert header
+      // Insert header, then mobile nav strip, then sidebar (order matters for layout)
       var header = temp.querySelector('header');
+      var navMobile = temp.querySelector('.site-nav-mobile');
+      var sidebar = temp.querySelector('aside');
+
       if (header) {
         document.body.insertBefore(header, document.body.firstChild);
       }
-
-      // Insert sidebar
-      var sidebar = temp.querySelector('aside');
-      if (sidebar) {
-        document.body.insertBefore(sidebar, document.body.firstChild.nextSibling);
+      var insertAfter = document.querySelector('header.site-header') || document.body.firstChild;
+      if (navMobile && insertAfter) {
+        document.body.insertBefore(navMobile, insertAfter.nextSibling);
       }
+      if (sidebar) {
+        var navEl = document.querySelector('.site-nav-mobile');
+        var anchor = navEl || document.querySelector('header.site-header');
+        document.body.insertBefore(sidebar, anchor ? anchor.nextSibling : null);
+      }
+
+      function syncMobileNavSelect() {
+        var sel = document.getElementById('aipo-nav-select');
+        if (!sel) return;
+        var page = getCurrentPageName();
+        var opt = sel.querySelector('option[data-page="' + page + '"]');
+        if (opt) sel.value = opt.value;
+      }
+
+      function wireMobileNav() {
+        var sel = document.getElementById('aipo-nav-select');
+        if (!sel || sel.getAttribute('data-aipo-wired') === '1') return;
+        sel.setAttribute('data-aipo-wired', '1');
+        sel.addEventListener('change', function () {
+          var v = sel.value;
+          if (!v) return;
+          if (typeof window.loadAipoPage === 'function' && document.getElementById('aipo-content')) {
+            window.loadAipoPage(v, {});
+          } else {
+            window.location.href = v;
+          }
+        });
+      }
+
+      wireMobileNav();
 
       // Configure view controls per page (remove/rename options)
       applyHeaderViewConfig(currentPage);
@@ -132,6 +163,8 @@ window.toggleView = function() {
         });
         navLink.classList.add('active');
       }
+
+      syncMobileNavSelect();
 
       // Apply stored view preference
       var view = normalizeView(localStorage.getItem('aipo-view') || getDefaultView(currentPage), currentPage);

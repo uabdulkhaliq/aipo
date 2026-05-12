@@ -19,20 +19,16 @@
     <p>A progressive journey from experimentation to transformation and continuous value creation.</p>
   </div>
 
-<div class="step-controls">
-  <div class="sc-modes">
-    <button class="sc-btn" data-mode="all" onclick="setStepMode('all')">All Levels</button>
-    <button class="sc-btn" data-mode="1"   onclick="setStepMode('1')">1 Level</button>
-  </div>
-  <div class="sc-nav" id="scNav">
-    <button class="sc-arrow" id="prevBtn" onclick="goStep(-1)">&#8592; Prev</button>
-    <span class="sc-counter" id="scCounter">Level 1 of 3</span>
-    <button class="sc-arrow" id="nextBtn" onclick="goStep(1)">Next &#8594;</button>
-  </div>
-  <div class="sc-dots" id="scDots"></div>
-</div>
+  <nav class="page-section-jump" aria-label="Jump on maturity page">
+    <label class="page-section-jump-label" for="mat-page-jump">Jump to</label>
+    <select id="mat-page-jump" class="page-section-jump-select" data-jump="1">
+      <option value="">Choose…</option>
+      <option value="mat-compare">Maturity comparison table</option>
+      <option value="mat-takeaway">Summary &amp; takeaway</option>
+    </select>
+  </nav>
 
-  <table class="maturity-table">
+  <table class="maturity-table" id="mat-compare">
     <thead>
       <tr>
         <th class="th-row-label">Maturity Level</th>
@@ -56,69 +52,69 @@
     <tbody>
       <tr>
         <td class="row-label">Focus</td>
-        <td class="l1">Explore possibilities and prove value through targeted initiatives.</td>
-        <td class="l2">Embed AI into core processes and scale across the organization.</td>
-        <td class="l3">Transform how the organization operates, creates value and serves customers.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Explore possibilities and prove value through targeted initiatives.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Embed AI into core processes and scale across the organization.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Transform how the organization operates, creates value and serves customers.</td>
       </tr>
       <tr>
         <td class="row-label">Strategy &amp; Alignment</td>
-        <td class="l1">AI seen as an opportunity; limited strategy. Initiatives are tactical and siloed.</td>
-        <td class="l2">AI strategy aligned to business priorities. Roadmap with clear goals and governance.</td>
-        <td class="l3">AI is central to strategy and competitive advantage. Enterprise-wide vision and long-term value creation.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>AI seen as an opportunity; limited strategy. Initiatives are tactical and siloed.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>AI strategy aligned to business priorities. Roadmap with clear goals and governance.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>AI is central to strategy and competitive advantage. Enterprise-wide vision and long-term value creation.</td>
       </tr>
       <tr>
         <td class="row-label">Use Cases</td>
-        <td class="l1">Isolated pilots and experiments. Focus on quick wins and low-risk areas.</td>
-        <td class="l2">Portfolio of use cases with repeatable patterns. Focus on high-impact and scalable initiatives.</td>
-        <td class="l3">AI reshapes end-to-end value streams. New business models and revenue opportunities.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Isolated pilots and experiments. Focus on quick wins and low-risk areas.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Portfolio of use cases with repeatable patterns. Focus on high-impact and scalable initiatives.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>AI reshapes end-to-end value streams. New business models and revenue opportunities.</td>
       </tr>
       <tr>
         <td class="row-label">Operating Model</td>
-        <td class="l1">Ad-hoc execution. Limited cross-functional collaboration.</td>
-        <td class="l2">Standardized processes and roles. Cross-functional teams and centers of excellence.</td>
-        <td class="l3">AI-native operating model. Autonomous processes with human-in-the-loop where it adds value.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Ad-hoc execution. Limited cross-functional collaboration.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Standardized processes and roles. Cross-functional teams and centers of excellence.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>AI-native operating model. Autonomous processes with human-in-the-loop where it adds value.</td>
       </tr>
       <tr>
         <td class="row-label">Data &amp; Technology</td>
-        <td class="l1">Siloed data, inconsistent quality. Limited tools and manual integrations.</td>
-        <td class="l2">Trusted, integrated data foundations. Standard platforms, models and MLOps practices.</td>
-        <td class="l3">Intelligent, real-time data ecosystem. Composable platforms and AI/automation at scale.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Siloed data, inconsistent quality. Limited tools and manual integrations.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Trusted, integrated data foundations. Standard platforms, models and MLOps practices.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Intelligent, real-time data ecosystem. Composable platforms and AI/automation at scale.</td>
       </tr>
       <tr>
         <td class="row-label">Governance &amp; Risk</td>
-        <td class="l1">Basic awareness of risks. Policies are ad-hoc and reactive.</td>
-        <td class="l2">Defined governance framework. Risk, privacy, security and compliance embedded.</td>
-        <td class="l3">Proactive, adaptive governance. Ethics, transparency and trust drive innovation.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Basic awareness of risks. Policies are ad-hoc and reactive.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Defined governance framework. Risk, privacy, security and compliance embedded.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Proactive, adaptive governance. Ethics, transparency and trust drive innovation.</td>
       </tr>
       <tr>
         <td class="row-label">People &amp; Culture</td>
-        <td class="l1">Early adopters and individual champions. Skills are limited and fragmented.</td>
-        <td class="l2">AI skills and literacy broadly developed. Change management and adoption programs active.</td>
-        <td class="l3">AI-first culture. Continuous learning, innovation and ownership across all levels.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Early adopters and individual champions. Skills are limited and fragmented.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>AI skills and literacy broadly developed. Change management and adoption programs active.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>AI-first culture. Continuous learning, innovation and ownership across all levels.</td>
       </tr>
       <tr>
         <td class="row-label">Measurement &amp; Value</td>
-        <td class="l1">Success measured at pilot level. Limited tracking of impact.</td>
-        <td class="l2">Clear KPIs and value tracking across use cases. Regular reporting and ROI focus.</td>
-        <td class="l3">Value measured continuously across the enterprise. Outcomes drive ongoing optimization and reinvention.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Success measured at pilot level. Limited tracking of impact.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Clear KPIs and value tracking across use cases. Regular reporting and ROI focus.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Value measured continuously across the enterprise. Outcomes drive ongoing optimization and reinvention.</td>
       </tr>
       <tr>
         <td class="row-label">Outcomes</td>
-        <td class="l1">Proof of concept and early wins. Learning what works.</td>
-        <td class="l2">Operational efficiency, quality improvement and cost optimization at scale.</td>
-        <td class="l3">Business transformation, agility and growth. New value streams and market differentiation.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Proof of concept and early wins. Learning what works.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Operational efficiency, quality improvement and cost optimization at scale.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Business transformation, agility and growth. New value streams and market differentiation.</td>
       </tr>
       <tr>
         <td class="row-label">Organization Mindset</td>
-        <td class="l1">Curious but cautious. AI is seen as an experimental tool.</td>
-        <td class="l2">Confident and pragmatic. AI is a critical enabler of performance.</td>
-        <td class="l3">Bold and forward-looking. AI is embedded in how we work and innovate.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Curious but cautious. AI is seen as an experimental tool.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Confident and pragmatic. AI is a critical enabler of performance.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Bold and forward-looking. AI is embedded in how we work and innovate.</td>
       </tr>
       <tr>
         <td class="row-label">CMMI Alignment</td>
-        <td class="l1">Ad-hoc but deliberate—controlled discovery, not unstructured exploration. Repeatable experiments focus learning effort.</td>
-        <td class="l2">Documented and measured against baselines. AI initiatives are planned and tracked with defined metrics.</td>
-        <td class="l3">Quantitative feedback loop. AI-native service ecosystem with self-improving capabilities driven by continuous data.</td>
+        <td class="l1"><span class="mat-cap mat-cap--1">Level 1 – Adoption</span>Ad-hoc but deliberate—controlled discovery, not unstructured exploration. Repeatable experiments focus learning effort.</td>
+        <td class="l2"><span class="mat-cap mat-cap--2">Level 2 – Integration</span>Documented and measured against baselines. AI initiatives are planned and tracked with defined metrics.</td>
+        <td class="l3"><span class="mat-cap mat-cap--3">Level 3 – Transformation</span>Quantitative feedback loop. AI-native service ecosystem with self-improving capabilities driven by continuous data.</td>
       </tr>
     </tbody>
   </table>
@@ -156,92 +152,13 @@
     </div>
   </details>
 
-  <div class="rule-bar">
+  <div class="rule-bar" id="mat-takeaway">
     <strong>Maturity is a journey, not a destination.</strong> Continue to iterate, measure, learn and raise the bar.
   </div>
 </div>
 
-<script>
-(function () {
-  var levels = ['l1', 'l2', 'l3'];
-  var headers = ['th-level1', 'th-level2', 'th-level3'];
-  var names = ['Level 1 – Adoption', 'Level 2 – Integration', 'Level 3 – Transformation'];
-  var currentStep = 0;
-  var currentMode = 'all';
-
-  function setCols(visible) {
-    levels.forEach(function (cls, i) {
-      var show = visible.indexOf(i) !== -1;
-      document.querySelectorAll('td.' + cls).forEach(function (el) {
-        el.style.display = show ? '' : 'none';
-      });
-      document.querySelectorAll('th.' + headers[i]).forEach(function (el) {
-        el.style.display = show ? '' : 'none';
-      });
-    });
-  }
-
-  function applyView(mode, step) {
-    currentMode = mode;
-    currentStep = step;
-    var n = levels.length;
-
-    document.querySelectorAll('.sc-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.dataset.mode === mode);
-    });
-
-    if (mode === 'all') {
-      setCols([0, 1, 2]);
-      document.getElementById('scNav').style.display = 'none';
-      document.getElementById('scDots').style.display = 'none';
-      return;
-    }
-
-    var count = parseInt(mode, 10);
-    var maxStep = n - 1;
-    if (currentStep < 0) currentStep = 0;
-    if (currentStep > maxStep) currentStep = maxStep;
-
-    document.getElementById('scNav').style.display = 'flex';
-    document.getElementById('scDots').style.display = 'flex';
-
-    var visible = [];
-    if (count === 1) {
-      visible = [currentStep];
-    } else if (count === 2) {
-      visible = [currentStep, currentStep + 1].filter(function (i) { return i < n; });
-    } else {
-      for (var i = Math.max(0, currentStep - 1); i <= Math.min(n - 1, currentStep + 1); i++) visible.push(i);
-    }
-    setCols(visible);
-
-    var label;
-    if (count === 1) {
-      label = names[currentStep];
-    } else {
-      label = 'Levels ' + (visible[0] + 1) + '\u2013' + (visible[visible.length - 1] + 1) + ' of ' + n;
-    }
-    document.getElementById('scCounter').textContent = label;
-    document.getElementById('prevBtn').disabled = currentStep === 0;
-    document.getElementById('nextBtn').disabled = currentStep >= maxStep;
-
-    var dotsEl = document.getElementById('scDots');
-    dotsEl.innerHTML = '';
-    levels.forEach(function (_, i) {
-      var d = document.createElement('span');
-      d.className = 'sc-dot' + (i === currentStep ? ' active' : '');
-      d.onclick = (function (idx) { return function () { applyView(currentMode, idx); }; })(i);
-      dotsEl.appendChild(d);
-    });
-  }
-
-  window.setStepMode = function (mode) { applyView(mode, currentStep); };
-  window.goStep = function (dir) { applyView(currentMode, currentStep + dir); };
-
-  applyView('all', 0);
-})();
-</script>
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 </body>
 </html>

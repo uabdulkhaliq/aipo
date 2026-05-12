@@ -19,11 +19,23 @@
     <p>A practical, repeatable framework to identify, build and scale AI initiatives that deliver measurable business impact.</p>
   </div>
 
+<nav class="page-section-jump" aria-label="Jump to workflow stage">
+  <label class="page-section-jump-label" for="wf-stage-jump">Stages</label>
+  <select id="wf-stage-jump" class="page-section-jump-select" data-jump="1">
+    <option value="">Jump to…</option>
+    <option value="wf-stage-1">1 · Value</option>
+    <option value="wf-stage-2">2 · Use cases</option>
+    <option value="wf-stage-3">3 · Operating model</option>
+    <option value="wf-stage-4">4 · Foundation</option>
+    <option value="wf-stage-5">5 · Governance</option>
+    <option value="wf-stage-6">6 · Execution</option>
+  </select>
+</nav>
+
 <div class="step-controls">
   <div class="sc-modes">
     <button class="sc-btn" data-mode="all" onclick="setStepMode('all')">All Steps</button>
-    <button class="sc-btn" data-mode="1"   onclick="setStepMode('1')">1 Step</button>
-    <button class="sc-btn" data-mode="3"   onclick="setStepMode('3')">3 Steps</button>
+    <button class="sc-btn" data-mode="3" onclick="setStepMode('3')">3 Steps</button>
   </div>
   <div class="sc-nav" id="scNav">
     <button class="sc-arrow" id="prevBtn" onclick="goStep(-1)">&#8592; Prev</button>
@@ -36,7 +48,7 @@
   <div class="workflow-grid">
 
     <!-- Col 1 -->
-    <div class="col c1">
+    <div class="col c1" id="wf-stage-1">
       <div class="col-header h1">
         <div class="col-num">1</div>
         <div>
@@ -70,7 +82,7 @@
     </div>
 
     <!-- Col 2 -->
-    <div class="col c2">
+    <div class="col c2" id="wf-stage-2">
       <div class="col-header h2">
         <div class="col-num">2</div>
         <div>
@@ -101,7 +113,7 @@
     </div>
 
     <!-- Col 3 -->
-    <div class="col c3">
+    <div class="col c3" id="wf-stage-3">
       <div class="col-header h3">
         <div class="col-num">3</div>
         <div>
@@ -131,7 +143,7 @@
     </div>
 
     <!-- Col 4 -->
-    <div class="col c4">
+    <div class="col c4" id="wf-stage-4">
       <div class="col-header h4">
         <div class="col-num">4</div>
         <div>
@@ -163,7 +175,7 @@
     </div>
 
     <!-- Col 5 -->
-    <div class="col c5">
+    <div class="col c5" id="wf-stage-5">
       <div class="col-header h5">
         <div class="col-num">5</div>
         <div>
@@ -206,7 +218,7 @@
     </div>
 
     <!-- Col 6 -->
-    <div class="col c6">
+    <div class="col c6" id="wf-stage-6">
       <div class="col-header h6">
         <div class="col-num">6</div>
         <div>
@@ -328,6 +340,8 @@
   var cols = Array.from(document.querySelectorAll('.workflow-grid .col'));
   var currentStep = 0;
   var currentMode = 'all';
+  var desktopMode = 'all';
+  var mqNarrow = window.matchMedia('(max-width: 900px)');
 
   function applyView(mode, step) {
     currentMode = mode;
@@ -395,13 +409,21 @@
     });
   }
 
-  window.setStepMode = function (mode) { applyView(mode, currentStep); };
+  window.setStepMode = function (mode) {
+    if (mode === 'all' || mode === '3') desktopMode = mode;
+    applyView(mqNarrow.matches ? '1' : mode, currentStep);
+  };
   window.goStep = function (dir) { applyView(currentMode, currentStep + dir); };
 
-  applyView('all', 0);
+  mqNarrow.addEventListener('change', function () {
+    applyView(mqNarrow.matches ? '1' : desktopMode, currentStep);
+  });
+
+  applyView(mqNarrow.matches ? '1' : desktopMode, 0);
 })();
 </script>
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 </body>
 </html>

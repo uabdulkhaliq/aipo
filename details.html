@@ -18,11 +18,23 @@
   <p>A deep-dive into each framework step: what it is, how it works and what success looks like.</p>
 </div>
 
+<nav class="page-section-jump" aria-label="Jump to step">
+  <label class="page-section-jump-label" for="details-step-jump">Steps</label>
+  <select id="details-step-jump" class="page-section-jump-select" data-jump="1">
+    <option value="">Jump to…</option>
+    <option value="detail-card-1">1 · Value (Why)</option>
+    <option value="detail-card-2">2 · Use cases</option>
+    <option value="detail-card-3">3 · Operating model</option>
+    <option value="detail-card-4">4 · Foundation</option>
+    <option value="detail-card-5">5 · Governance</option>
+    <option value="detail-card-6">6 · Execution</option>
+  </select>
+</nav>
+
 <div class="step-controls">
   <div class="sc-modes">
-    <button class="sc-btn" data-mode="all"  onclick="setStepMode('all')">All Steps</button>
-    <button class="sc-btn" data-mode="1"    onclick="setStepMode('1')">1 Step</button>
-    <button class="sc-btn" data-mode="3"    onclick="setStepMode('3')">3 Steps</button>
+    <button class="sc-btn" data-mode="all" onclick="setStepMode('all')">All Steps</button>
+    <button class="sc-btn" data-mode="3" onclick="setStepMode('3')">3 Steps</button>
   </div>
   <div class="sc-nav" id="scNav">
     <button class="sc-arrow" id="prevBtn" onclick="goStep(-1)">&#8592; Prev</button>
@@ -35,7 +47,7 @@
 <div class="page">
 
   <!-- Card 1 - Value -->
-  <div class="card c1">
+  <div class="card c1" id="detail-card-1">
     <div class="card-header">
       <div class="card-num">1</div>
       <div>
@@ -84,7 +96,7 @@
   </div>
 
   <!-- Card 2 - Use Cases -->
-  <div class="card c2">
+  <div class="card c2" id="detail-card-2">
     <div class="card-header">
       <div class="card-num">2</div>
       <div>
@@ -137,7 +149,7 @@
   </div>
 
   <!-- Card 3 - Operating Model -->
-  <div class="card c3">
+  <div class="card c3" id="detail-card-3">
     <div class="card-header">
       <div class="card-num">3</div>
       <div>
@@ -186,7 +198,7 @@
   </div>
 
   <!-- Card 4 - Foundation -->
-  <div class="card c4">
+  <div class="card c4" id="detail-card-4">
     <div class="card-header">
       <div class="card-num">4</div>
       <div>
@@ -233,7 +245,7 @@
   </div>
 
   <!-- Card 5 - Governance -->
-  <div class="card c5">
+  <div class="card c5" id="detail-card-5">
     <div class="card-header">
       <div class="card-num">5</div>
       <div>
@@ -302,7 +314,7 @@
   </div>
 
   <!-- Card 6 - Execution -->
-  <div class="card c6">
+  <div class="card c6" id="detail-card-6">
     <div class="card-header">
       <div class="card-num">6</div>
       <div>
@@ -369,6 +381,8 @@
   var cards = Array.from(document.querySelectorAll('.page > .card'));
   var currentStep = 0;
   var currentMode = 'all';
+  var desktopMode = 'all';
+  var mqNarrow = window.matchMedia('(max-width: 900px)');
 
   function applyView(mode, step) {
     currentMode = mode;
@@ -378,7 +392,7 @@
     // Remove all step-mode classes
     body.classList.remove('step-mode-1', 'step-mode-2', 'step-mode-3');
 
-    // Update button active state
+    // Update button active state (narrow viewports hide mode buttons via CSS)
     document.querySelectorAll('.sc-btn').forEach(function (btn) {
       btn.classList.toggle('active', btn.dataset.mode === mode);
     });
@@ -444,14 +458,21 @@
     });
   }
 
-  window.setStepMode = function (mode) { applyView(mode, currentStep); };
+  window.setStepMode = function (mode) {
+    if (mode === 'all' || mode === '3') desktopMode = mode;
+    applyView(mqNarrow.matches ? '1' : mode, currentStep);
+  };
   window.goStep = function (dir) { applyView(currentMode, currentStep + dir); };
 
-  // Init
-  applyView('all', 0);
+  mqNarrow.addEventListener('change', function () {
+    applyView(mqNarrow.matches ? '1' : desktopMode, currentStep);
+  });
+
+  applyView(mqNarrow.matches ? '1' : desktopMode, 0);
 })();
 </script>
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 </body>
 </html>

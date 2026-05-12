@@ -15,8 +15,21 @@
 <div class="page">
   <div class="page-title">AI+ ORGANIZATION FRAMEWORK</div>
 
+  <nav class="page-section-jump" aria-label="Jump to framework section">
+    <label class="page-section-jump-label" for="fw-section-jump">Sections</label>
+    <select id="fw-section-jump" class="page-section-jump-select" data-jump="1">
+      <option value="">Jump to…</option>
+      <option value="fw-s1">1 · Value (Why)</option>
+      <option value="fw-s2">2 · Use cases (Where)</option>
+      <option value="fw-s3">3 · Operating model (How)</option>
+      <option value="fw-s4">4 · Foundation (What)</option>
+      <option value="fw-s5">5 · Governance</option>
+      <option value="fw-s6">6 · Execution</option>
+    </select>
+  </nav>
+
   <!-- Section 1 -->
-  <div class="section s1">
+  <div class="section s1" id="fw-s1">
     <div class="section-label">
       <div class="section-number">1</div>
       <div class="section-title-block">
@@ -46,7 +59,7 @@
   </div>
 
   <!-- Section 2 -->
-  <div class="section s2">
+  <div class="section s2" id="fw-s2">
     <div class="section-label">
       <div class="section-number">2</div>
       <div class="section-title-block">
@@ -83,7 +96,7 @@
   </div>
 
   <!-- Section 3 -->
-  <div class="section s3">
+  <div class="section s3" id="fw-s3">
     <div class="section-label">
       <div class="section-number">3</div>
       <div class="section-title-block">
@@ -112,7 +125,7 @@
   </div>
 
   <!-- Section 4 -->
-  <div class="section s4">
+  <div class="section s4" id="fw-s4">
     <div class="section-label">
       <div class="section-number">4</div>
       <div class="section-title-block">
@@ -141,7 +154,7 @@
   </div>
 
   <!-- Section 5 -->
-  <div class="section s5">
+  <div class="section s5" id="fw-s5">
     <div class="section-label">
       <div class="section-number">5</div>
       <div class="section-title-block">
@@ -176,7 +189,7 @@
   </div>
 
   <!-- Section 6 -->
-  <div class="section s6">
+  <div class="section s6" id="fw-s6">
     <div class="section-label">
       <div class="section-number">6</div>
       <div class="section-title-block">
@@ -253,6 +266,7 @@
   </div>
 </div>
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 </body>
 </html>

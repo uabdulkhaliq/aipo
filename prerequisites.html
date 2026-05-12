@@ -21,7 +21,7 @@
     <!--<div class="banner-eyebrow">Preparing Your Organization for AI Transformation</div>-->
     <div class="banner-title">Before AI Can Transform,<br><em>the Ground Must Be Ready</em></div>
     <div class="banner-desc">
-      AI does not create order out of chaos — it amplifies whatever already exists. Organizations that deploy AI on top of poorly defined processes, unclassified data, and weak governance will get faster, larger versions of their existing problems. These seven prerequisite domains are not optional steps you can skip. They are the foundation that makes AI investment safe, sustainable, and transformational rather than expensive and risky. <button class="why-link" onclick="toggleWhyStrip()">Why?</button>
+      AI does not create order out of chaos — it amplifies whatever already exists. Organizations that deploy AI on top of poorly defined processes, unclassified data, and weak governance will get faster, larger versions of their existing problems. These seven prerequisite domains are not optional steps you can skip. They are the foundation that makes AI investment safe, sustainable, and transformational rather than expensive and risky. <button type="button" class="why-link" id="whyToggleBtn" aria-expanded="false" aria-controls="whyStrip" onclick="toggleWhyStrip()">Why?</button>
     </div>
     <!--
     <div class="banner-tags">
@@ -69,8 +69,22 @@
     <div class="sec-divider-count">7 domains</div>
   </div>
 
+  <nav class="page-section-jump" aria-label="Jump to domain">
+    <label class="page-section-jump-label" for="prereq-domain-jump">Domains</label>
+    <select id="prereq-domain-jump" class="page-section-jump-select" data-jump="1">
+      <option value="">Jump to…</option>
+      <option value="domain-d1">01 · Process Maturity</option>
+      <option value="domain-d2">02 · Data Foundation</option>
+      <option value="domain-d3">03 · Information Security</option>
+      <option value="domain-d4">04 · Privacy &amp; Compliance</option>
+      <option value="domain-d5">05 · Technology &amp; Integration</option>
+      <option value="domain-d6">06 · People &amp; Change Readiness</option>
+      <option value="domain-d7">07 · Ethics &amp; AI Principles</option>
+    </select>
+  </nav>
+
   <!-- ── DOMAIN 1: PROCESS MATURITY ── -->
-  <div class="domain d1">
+  <div class="domain d1" id="domain-d1">
     <div class="d-label">
       <div class="d-pre">Domain 01</div>
       <div class="d-name">Process Maturity</div>
@@ -110,7 +124,7 @@
   </div>
 
   <!-- ── DOMAIN 2: DATA FOUNDATION ── -->
-  <div class="domain d2">
+  <div class="domain d2" id="domain-d2">
     <div class="d-label">
       <div class="d-pre">Domain 02</div>
       <div class="d-name">Data Foundation &amp; Classification</div>
@@ -152,7 +166,7 @@
   </div>
 
   <!-- ── DOMAIN 3: INFORMATION SECURITY ── -->
-  <div class="domain d3">
+  <div class="domain d3" id="domain-d3">
     <div class="d-label">
       <div class="d-pre">Domain 03</div>
       <div class="d-name">Information Security</div>
@@ -194,7 +208,7 @@
   </div>
 
   <!-- ── DOMAIN 4: PRIVACY & COMPLIANCE ── -->
-  <div class="domain d4">
+  <div class="domain d4" id="domain-d4">
     <div class="d-label">
       <div class="d-pre">Domain 04</div>
       <div class="d-name">Privacy &amp; Regulatory Compliance</div>
@@ -236,7 +250,7 @@
   </div>
 
   <!-- ── DOMAIN 5: TECHNOLOGY BASELINE ── -->
-  <div class="domain d5">
+  <div class="domain d5" id="domain-d5">
     <div class="d-label">
       <div class="d-pre">Domain 05</div>
       <div class="d-name">Technology &amp; Integration Baseline</div>
@@ -278,7 +292,7 @@
   </div>
 
   <!-- ── DOMAIN 6: PEOPLE & CHANGE READINESS ── -->
-  <div class="domain d6">
+  <div class="domain d6" id="domain-d6">
     <div class="d-label">
       <div class="d-pre">Domain 06</div>
       <div class="d-name">People &amp; Change Readiness</div>
@@ -320,7 +334,7 @@
   </div>
 
   <!-- ── DOMAIN 7: ETHICS & AI PRINCIPLES ── -->
-  <div class="domain d7">
+  <div class="domain d7" id="domain-d7">
     <div class="d-label">
       <div class="d-pre">Domain 07</div>
       <div class="d-name">Ethics &amp; AI Principles</div>
@@ -465,17 +479,17 @@
 window.toggleWhyStrip = function () {
   var strip = document.getElementById('whyStrip');
   if (!strip) return;
-  var btn = document.querySelector('.why-strip-toggle');
-  var hidden = strip.style.display === 'none' || strip.style.display === '';
-  strip.style.display = hidden ? 'grid' : 'none';
-  if (btn && btn.querySelector('.toggle-label')) {
-    btn.classList.toggle('open', hidden);
-    btn.querySelector('.toggle-label').textContent = hidden ? 'Hide Context' : 'Show Context';
+  var hidden = strip.style.display === 'none';
+  strip.style.display = hidden ? 'flex' : 'none';
+  var btn = document.getElementById('whyToggleBtn');
+  if (btn) {
+    btn.setAttribute('aria-expanded', hidden ? 'true' : 'false');
   }
 };
 </script>
 
 </div>
+<script src="section-jump.js"></script>
 <script src="spa-nav.js"></script>
 
 </body>
